@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Popup.css";
 import bannerImage from "../assets/work-hero.jpg";
+import logo from "../assets/kliqura-logo.png";
 
 export default function Popup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function Popup() {
         </button>
 
         <div className="popup-left">
+          <img src={logo} alt="Kliqura logo" className="popup-logo" />
           <h2>
             We Build Great
             <span>DIGITAL EXPERIENCES</span>
