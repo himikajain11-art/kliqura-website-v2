@@ -29,30 +29,12 @@ const services = [
   },
   {
     number: "05",
-    title: "Copy Writing",
-    icon: "Aa",
-    description: "Words that capture attention and inspire people to take action.",
-  },
-  {
-    number: "06",
-    title: "Graphic Design",
-    icon: "✦",
-    description: "Strong visual communication that makes your brand memorable.",
-  },
-  {
-    number: "07",
     title: "Social Media Management",
     icon: "#",
     description: "Consistent social presence, community building and content planning.",
   },
   {
-    number: "08",
-    title: "Paid Advertising",
-    icon: "▣",
-    description: "Targeted paid campaigns that turn budget into measurable outcomes.",
-  },
-  {
-    number: "09",
+    number: "06",
     title: "Website Optimization",
     icon: "</>",
     description: "Better website experience, speed and conversion-focused improvements.",
