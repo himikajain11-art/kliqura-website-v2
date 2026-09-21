@@ -71,48 +71,66 @@ function Home() {
 
         <div className="home-hero-visual">
           <svg viewBox="0 0 400 400" className="growth-ring">
-            <g transform="rotate(-90 200 200)">
-              <circle
-                cx="200"
-                cy="200"
-                r="140"
-                fill="none"
-                stroke="#051c52"
-                strokeWidth="34"
-                strokeDasharray="211.8 667.4"
-                strokeDashoffset="0"
-              />
-              <circle
-                cx="200"
-                cy="200"
-                r="140"
-                fill="none"
-                stroke="#ffc300"
-                strokeWidth="34"
-                strokeDasharray="211.8 667.4"
-                strokeDashoffset="-219.8"
-              />
-              <circle
-                cx="200"
-                cy="200"
-                r="140"
-                fill="none"
-                stroke="#e34e4e"
-                strokeWidth="34"
-                strokeDasharray="211.8 667.4"
-                strokeDashoffset="-439.6"
-              />
-              <circle
-                cx="200"
-                cy="200"
-                r="140"
-                fill="none"
-                stroke="#000000"
-                strokeWidth="34"
-                strokeDasharray="211.8 667.4"
-                strokeDashoffset="-659.4"
-              />
-            </g>
+            {/* Navy arc - SEO (top-right) */}
+            <path
+              id="arc-navy"
+              d="M224.31,62.13 A140,140 0 0 1 337.87,175.69"
+              fill="none"
+              stroke="#051c52"
+              strokeWidth="38"
+              strokeLinecap="round"
+            />
+            {/* Yellow arc - Website Optimization (bottom-right, reversed for upright text) */}
+            <path
+              id="arc-yellow"
+              d="M224.31,337.87 A140,140 0 0 0 337.87,224.31"
+              fill="none"
+              stroke="#ffc300"
+              strokeWidth="38"
+              strokeLinecap="round"
+            />
+            {/* Red arc - Performance Marketing (bottom-left, reversed for upright text) */}
+            <path
+              id="arc-red"
+              d="M62.13,224.31 A140,140 0 0 0 175.69,337.87"
+              fill="none"
+              stroke="#e34e4e"
+              strokeWidth="38"
+              strokeLinecap="round"
+            />
+            {/* Black arc - Social Media Management (top-left) */}
+            <path
+              id="arc-black"
+              d="M62.13,175.69 A140,140 0 0 1 175.69,62.13"
+              fill="none"
+              stroke="#000000"
+              strokeWidth="38"
+              strokeLinecap="round"
+            />
+
+            <text fontSize="15" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
+              <textPath href="#arc-navy" startOffset="50%" textAnchor="middle">
+                SEO
+              </textPath>
+            </text>
+
+            <text fontSize="14" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#000000">
+              <textPath href="#arc-yellow" startOffset="50%" textAnchor="middle">
+                Website Optimization
+              </textPath>
+            </text>
+
+            <text fontSize="14" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
+              <textPath href="#arc-red" startOffset="50%" textAnchor="middle">
+                Performance Marketing
+              </textPath>
+            </text>
+
+            <text fontSize="13" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
+              <textPath href="#arc-black" startOffset="50%" textAnchor="middle">
+                Social Media Management
+              </textPath>
+            </text>
           </svg>
 
           <div className="ring-center">
@@ -121,15 +139,6 @@ function Home() {
             <span>218% Traffic Growth</span>
             <div className="ring-play">▶</div>
           </div>
-
-          <span className="ring-label label-navy label-top-left">Growth</span>
-          <span className="ring-label label-yellow label-top-right">SEO</span>
-          <span className="ring-label label-red label-bottom-right">
-            Paid Ads
-          </span>
-          <span className="ring-label label-black label-bottom-left">
-            Social
-          </span>
         </div>
       </section>
 

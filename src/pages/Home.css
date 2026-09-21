@@ -194,41 +194,12 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--red);
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-}
-
-.ring-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  white-space: nowrap;
-  pointer-events: none;
-  text-align: center;
-}
-
-.label-navy {
-  color: var(--white);
-  transform: translate(-50%, -50%) translate(70px, -70px);
-}
-.label-yellow {
-  color: var(--black);
-  transform: translate(-50%, -50%) translate(70px, 70px);
-}
-.label-red {
-  color: var(--white);
-  transform: translate(-50%, -50%) translate(-70px, 70px);
-}
-.label-black {
-  color: var(--white);
-  transform: translate(-50%, -50%) translate(-70px, -70px);
 }
 
 /* ===== INTRO / SPLIT ===== */
@@ -522,21 +493,6 @@
   .ring-center {
     width: 140px;
     height: 140px;
-  }
-  .ring-label {
-    font-size: 11px;
-  }
-  .label-navy {
-    transform: translate(-50%, -50%) translate(50px, -50px);
-  }
-  .label-yellow {
-    transform: translate(-50%, -50%) translate(50px, 50px);
-  }
-  .label-red {
-    transform: translate(-50%, -50%) translate(-50px, 50px);
-  }
-  .label-black {
-    transform: translate(-50%, -50%) translate(-50px, -50px);
   }
   .home-service-grid,
   .home-work-grid {
