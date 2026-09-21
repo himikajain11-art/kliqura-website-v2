@@ -250,7 +250,7 @@ function Home() {
             "kliqura understood the problem before we had the words for it.
             Results followed fast."
           </p>
-          <span>— alien Doe, Founder, Nourish & Co.</span>
+          <span>— Natasha shah, Founder, Nourish & Co.</span>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-/* ===== KLIQURA HOME PAGE — Professional White Theme ===== */
+/* ===== KLIQURA HOME PAGE — Black & White primary, Navy/Red/Yellow accents ===== */
 
 :root {
   --navy: #051c52;
@@ -17,12 +17,13 @@
   overflow-x: hidden;
 }
 
+/* Headings ab BLACK (pehle sab navy tha) */
 .home-page h1,
 .home-page h2,
 .home-page h3 {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--black);
   line-height: 1.15;
   margin: 0 0 18px 0;
 }
@@ -49,9 +50,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 14px 26px;
+  padding: 16px 30px;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -68,14 +69,15 @@
   border-color: var(--black);
 }
 
+/* Secondary button ab black */
 .outline-button {
-  background: var(--navy);
+  background: var(--black);
   color: var(--white);
-  border: 2px solid var(--navy);
+  border: 2px solid var(--black);
 }
 .outline-button:hover {
   background: var(--white);
-  color: var(--navy);
+  color: var(--black);
 }
 
 /* ===== HERO ===== */
@@ -110,12 +112,6 @@
   margin-bottom: 50px;
 }
 
-.yellow-button,
-.outline-button {
-  font-size: 15px;
-  padding: 16px 30px;
-}
-
 .home-mini-results {
   display: flex;
   gap: 48px;
@@ -126,6 +122,10 @@
   font-family: "Manrope", sans-serif;
   font-size: 28px;
   font-weight: 800;
+  color: var(--black);
+}
+
+.home-mini-results div:nth-child(2) strong {
   color: var(--navy);
 }
 
@@ -134,17 +134,18 @@
   color: var(--muted);
 }
 
+/* ===== RING / DIAGRAM (thoda bada) ===== */
 .home-hero-visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 620px;
+  height: 640px;
 }
 
 .growth-ring {
-  width: 420px;
-  height: 420px;
+  width: 500px;   /* pehle 420px */
+  height: 500px;
 }
 
 .ring-center {
@@ -152,54 +153,54 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 190px;
-  height: 190px;
+  width: 226px;   /* pehle 190px */
+  height: 226px;
   border-radius: 50%;
   background: var(--white);
   border: 1px solid #eee;
-  box-shadow: 0 10px 30px rgba(5, 28, 82, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 4px;
-  padding: 10px;
+  gap: 5px;
+  padding: 12px;
 }
 
 .ring-brand {
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--muted);
   text-transform: lowercase;
   margin: 0;
 }
 
 .ring-center strong {
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--black);
 }
 
 .ring-center span {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--red);
 }
 
 .ring-play {
-  margin-top: 8px;
-  width: 34px;
-  height: 34px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: var(--red);
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 /* ===== INTRO / SPLIT ===== */
@@ -220,8 +221,8 @@
   font-family: "Manrope", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--navy);
-  border-left: 4px solid var(--red);
+  color: var(--black);
+  border-left: 4px solid var(--yellow);
   padding-left: 24px;
   line-height: 1.4;
 }
@@ -262,17 +263,27 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
+/* har card ka icon alag color — teeno accent colors balance ho jaate hain */
 .service-icon {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  background: var(--navy);
+  background: var(--black);
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   margin-bottom: 18px;
+}
+
+.home-service-card:nth-child(2) .service-icon {
+  background: var(--red);
+}
+
+.home-service-card:nth-child(3) .service-icon {
+  background: var(--yellow);
+  color: var(--black);
 }
 
 .home-service-card h3 {
@@ -298,11 +309,11 @@
   justify-content: center;
 }
 
-/* ===== RESULTS STRIP ===== */
+/* ===== RESULTS STRIP (ab black) ===== */
 .home-results {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: var(--navy);
+  background: var(--black);
   padding: 60px 7%;
 }
 
@@ -322,9 +333,14 @@
   color: var(--yellow);
 }
 
+.result-box:nth-child(2) strong,
+.result-box:nth-child(4) strong {
+  color: var(--white);
+}
+
 .result-box span {
   font-size: 13px;
-  color: #cfd4e4;
+  color: #cccccc;
 }
 
 /* ===== WORK / CASE STUDIES ===== */
@@ -395,6 +411,7 @@
   background: var(--red);
 }
 
+/* navy ab sirf ek jagah accent ki tarah */
 .navy-card {
   background: var(--navy);
 }
@@ -419,8 +436,8 @@
   background: var(--white);
   border-radius: 18px;
   padding: 56px 50px;
-  border: 3px solid var(--navy);
-  box-shadow: 10px 10px 0 var(--red), 0 20px 40px rgba(5, 28, 82, 0.12);
+  border: 3px solid var(--black);
+  box-shadow: 10px 10px 0 var(--yellow), 0 20px 40px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -428,7 +445,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 25px;
   font-weight: 700;
-  color: var(--red);
+  color: var(--black);
   line-height: 1.5;
   margin-bottom: 24px;
   position: relative;
@@ -439,7 +456,7 @@
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--red);
 }
 
 /* ===== CTA ===== */
@@ -473,6 +490,17 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .growth-ring {
+    width: 430px;
+    height: 430px;
+  }
+  .ring-center {
+    width: 196px;
+    height: 196px;
+  }
+}
+
 @media (max-width: 900px) {
   .home-hero,
   .home-intro {
@@ -483,16 +511,19 @@
     padding: 60px 6% 50px;
   }
   .home-hero-visual {
-    height: 420px;
+    height: 460px;
     margin-top: 20px;
   }
   .growth-ring {
-    width: 300px;
-    height: 300px;
+    width: 360px;
+    height: 360px;
   }
   .ring-center {
-    width: 140px;
-    height: 140px;
+    width: 165px;
+    height: 165px;
+  }
+  .ring-center strong {
+    font-size: 16px;
   }
   .home-service-grid,
   .home-work-grid {
@@ -508,6 +539,25 @@
 }
 
 @media (max-width: 600px) {
+  .home-hero-visual {
+    height: 380px;
+  }
+  .growth-ring {
+    width: 300px;
+    height: 300px;
+  }
+  .ring-center {
+    width: 140px;
+    height: 140px;
+  }
+  .ring-center strong {
+    font-size: 15px;
+  }
+  .ring-play {
+    width: 32px;
+    height: 32px;
+    margin-top: 6px;
+  }
   .home-service-grid,
   .home-work-grid,
   .home-results {
