@@ -69,13 +69,13 @@
 }
 
 .outline-button {
-  background: transparent;
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
   border: 2px solid var(--navy);
 }
 .outline-button:hover {
-  background: var(--navy);
-  color: var(--white);
+  background: var(--white);
+  color: var(--navy);
 }
 
 /* ===== HERO ===== */
@@ -134,7 +134,7 @@
   color: var(--muted);
 }
 
-.home-mascot-box {
+.home-hero-visual {
   position: relative;
   display: flex;
   align-items: center;
@@ -142,27 +142,106 @@
   height: 620px;
 }
 
-.home-mascot {
-  max-height: 600px;
-  position: relative;
-  z-index: 2;
-}
-
-.circle-one,
-.circle-two {
-  position: absolute;
-  border-radius: 50%;
-}
-.circle-one {
+.growth-ring {
   width: 420px;
   height: 420px;
-  background: var(--soft-bg);
-  border: 2px solid var(--yellow);
 }
-.circle-two {
-  width: 500px;
-  height: 500px;
-  border: 2px dashed var(--red);
+
+.ring-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(5, 28, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  padding: 10px;
+}
+
+.ring-brand {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.ring-center strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--black);
+}
+
+.ring-center span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.ring-play {
+  margin-top: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.ring-label {
+  position: absolute;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: var(--white);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.label-navy {
+  background: var(--navy);
+}
+.label-red {
+  background: var(--red);
+}
+.label-yellow {
+  background: var(--yellow);
+  color: var(--black);
+}
+.label-black {
+  background: var(--black);
+}
+
+.label-top-left {
+  top: 8%;
+  left: -2%;
+}
+.label-top-right {
+  top: 8%;
+  right: -4%;
+}
+.label-bottom-right {
+  bottom: 10%;
+  right: -6%;
+}
+.label-bottom-left {
+  bottom: 10%;
+  left: -4%;
 }
 
 /* ===== INTRO / SPLIT ===== */
@@ -445,20 +524,21 @@
     min-height: auto;
     padding: 60px 6% 50px;
   }
-  .home-mascot-box {
+  .home-hero-visual {
     height: 420px;
     margin-top: 20px;
   }
-  .home-mascot {
-    max-height: 400px;
-  }
-  .circle-one {
+  .growth-ring {
     width: 300px;
     height: 300px;
   }
-  .circle-two {
-    width: 360px;
-    height: 360px;
+  .ring-center {
+    width: 140px;
+    height: 140px;
+  }
+  .ring-label {
+    font-size: 11px;
+    padding: 6px 12px;
   }
   .home-service-grid,
   .home-work-grid {

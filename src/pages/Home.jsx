@@ -1,7 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/kliqura-logo.png";
-import mascot from "../assets/kliqura-mascot.png";
 import Popup from "../components/Popup";
 
 function Home() {
@@ -70,10 +69,67 @@ function Home() {
           </div>
         </div>
 
-        <div className="home-mascot-box">
-          <div className="circle-one"></div>
-          <div className="circle-two"></div>
-          <img src={mascot} alt="kliqura mascot" className="home-mascot" />
+        <div className="home-hero-visual">
+          <svg viewBox="0 0 400 400" className="growth-ring">
+            <g transform="rotate(-90 200 200)">
+              <circle
+                cx="200"
+                cy="200"
+                r="140"
+                fill="none"
+                stroke="#051c52"
+                strokeWidth="34"
+                strokeDasharray="211.8 667.4"
+                strokeDashoffset="0"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="140"
+                fill="none"
+                stroke="#ffc300"
+                strokeWidth="34"
+                strokeDasharray="211.8 667.4"
+                strokeDashoffset="-219.8"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="140"
+                fill="none"
+                stroke="#e34e4e"
+                strokeWidth="34"
+                strokeDasharray="211.8 667.4"
+                strokeDashoffset="-439.6"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="140"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="34"
+                strokeDasharray="211.8 667.4"
+                strokeDashoffset="-659.4"
+              />
+            </g>
+          </svg>
+
+          <div className="ring-center">
+            <p className="ring-brand">kliqura</p>
+            <strong>Growth Engine</strong>
+            <span>218% Traffic Growth</span>
+            <div className="ring-play">▶</div>
+          </div>
+
+          <span className="ring-label label-navy label-top-left">Growth</span>
+          <span className="ring-label label-yellow label-top-right">SEO</span>
+          <span className="ring-label label-red label-bottom-right">
+            Paid Ads
+          </span>
+          <span className="ring-label label-black label-bottom-left">
+            Social
+          </span>
         </div>
       </section>
 
