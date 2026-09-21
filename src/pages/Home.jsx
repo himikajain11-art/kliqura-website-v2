@@ -98,8 +98,8 @@ function Home() {
         </div>
 
         <div className="home-quote">
-          “The best marketing does not shout. It makes the right people lean
-          in.”
+          "The best marketing does not shout. It makes the right people lean
+          in."
         </div>
       </section>
 
@@ -182,8 +182,8 @@ function Home() {
 
         <div className="testimonial-card">
           <p>
-            “kliqura understood the problem before we had the words for it.
-            Results followed fast.”
+            "kliqura understood the problem before we had the words for it.
+            Results followed fast."
           </p>
           <span>— alien Doe, Founder, Nourish & Co.</span>
         </div>
@@ -194,7 +194,7 @@ function Home() {
 
         <div>
           <p>YOUR NEXT MOVE</p>
-          <h2>Let’s find the growth hiding in plain sight.</h2>
+          <h2>Let's find the growth hiding in plain sight.</h2>
         </div>
 
         <Link to="/contact" className="yellow-button">
