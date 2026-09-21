@@ -1,33 +1,156 @@
-/* ===== SERVICE "LEARN MORE" MODAL — add at the end of Services.css ===== */
+/* ===== BRAND-COLOR SERVICE CARDS — add at the end of Services.css ===== */
 
-.service-learn-more {
+:root {
+  --brand-navy: #051c52;
+  --brand-red: #e34e4e;
+  --brand-yellow: #ffc300;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+}
+
+.services-section {
+  background: var(--brand-white) !important;
+  padding: 80px 6% !important;
+}
+
+.services-heading h2 {
+  color: var(--brand-black) !important;
+}
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
   background: none !important;
   border: none !important;
+}
+
+.service-card {
+  background: var(--brand-white) !important;
+  border: 1px solid #eee !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
   padding: 0 !important;
-  cursor: pointer !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Banner (top colored box with icon) */
+.service-banner {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-banner-icon {
+  font-size: 48px;
+  color: var(--brand-white);
+}
+
+.banner-navy {
+  background: var(--brand-navy);
+}
+.banner-red {
+  background: var(--brand-red);
+}
+.banner-yellow {
+  background: var(--brand-yellow);
+}
+.banner-yellow .service-banner-icon {
+  color: var(--brand-black);
+}
+
+/* Card body */
+.service-card-body {
+  padding: 28px 26px 32px;
+}
+
+.service-card h3 {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--brand-black) !important;
+  margin: 0 0 14px 0 !important;
+  line-height: 1.35 !important;
+}
+
+/* Highlight pill inside heading */
+.highlight-pill {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 6px;
+  color: var(--brand-white);
+  font-weight: 800;
+}
+.pill-navy {
+  background: var(--brand-navy);
+}
+.pill-red {
+  background: var(--brand-red);
+}
+.pill-yellow {
+  background: var(--brand-yellow);
+  color: var(--brand-black);
+}
+
+.service-subtitle {
   font-size: 12px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.5px !important;
-  color: #fff !important;
-  text-transform: uppercase !important;
-  border-bottom: 1px solid #444 !important;
-  padding-bottom: 4px !important;
+  color: #888 !important;
+  margin: -8px 0 12px 0 !important;
+  font-weight: 500 !important;
+}
+
+.service-description {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: #555 !important;
+  margin: 0 0 24px 0 !important;
+}
+
+/* Enquire / Learn More button */
+.service-enquire-btn {
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 13px 22px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
   display: inline-flex !important;
-  gap: 6px !important;
   align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease !important;
+}
+.service-enquire-btn:hover {
+  opacity: 0.88 !important;
 }
 
-.service-learn-more:hover {
-  border-bottom-color: #fff !important;
+.btn-navy {
+  background: var(--brand-navy) !important;
+  color: var(--brand-white) !important;
+}
+.btn-red {
+  background: var(--brand-red) !important;
+  color: var(--brand-white) !important;
+}
+.btn-yellow {
+  background: var(--brand-yellow) !important;
+  color: var(--brand-black) !important;
 }
 
+/* ===== Modal ===== */
 .service-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(5, 28, 82, 0.6);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -37,25 +160,35 @@
 }
 
 .service-modal {
-  background: #0a0a0a;
-  border: 1px solid #2a2a2a;
+  background: var(--brand-white);
+  border-radius: 14px;
   max-width: 560px;
   width: 100%;
-  padding: 48px;
+  padding: 44px;
   position: relative;
   margin: auto;
+  border-top: 6px solid var(--brand-navy);
+}
+.modal-navy {
+  border-top-color: var(--brand-navy);
+}
+.modal-red {
+  border-top-color: var(--brand-red);
+}
+.modal-yellow {
+  border-top-color: var(--brand-yellow);
 }
 
 .service-modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 18px;
+  right: 18px;
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px solid #333;
-  background: transparent;
-  color: #fff;
+  border: 1px solid #ddd;
+  background: var(--brand-white);
+  color: var(--brand-black);
   font-size: 16px;
   cursor: pointer;
   display: flex;
@@ -63,63 +196,46 @@
   justify-content: center;
 }
 .service-modal-close:hover {
-  border-color: #fff;
-}
-
-.service-modal-number {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #666;
-  margin-bottom: 16px;
+  border-color: var(--brand-black);
 }
 
 .service-modal-icon {
   display: block;
-  font-size: 26px;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 34px;
+  color: var(--brand-navy);
+  margin-bottom: 16px;
 }
 
 .service-modal h3 {
   font-size: 26px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 800;
+  color: var(--brand-black);
   margin: 0 0 8px 0;
 }
 
 .service-modal-subtitle {
   font-size: 13px;
   color: #888;
-  margin: 0 0 20px 0;
+  margin: 0 0 18px 0;
 }
 
 .service-modal-details {
   font-size: 15px;
-  line-height: 1.7;
-  color: #aaa;
-  margin: 0 0 30px 0;
+  line-height: 1.75;
+  color: #555;
+  margin: 0 0 28px 0;
 }
 
-.service-modal a {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #fff;
-  text-transform: uppercase;
-  border-bottom: 1px solid #444;
-  padding-bottom: 4px;
-  display: inline-flex;
-  gap: 6px;
-  align-items: center;
-  text-decoration: none;
-}
-.service-modal a:hover {
-  border-bottom-color: #fff;
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
   .service-modal {
     padding: 32px 24px;
   }

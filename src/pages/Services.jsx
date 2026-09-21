@@ -4,52 +4,64 @@ import "./Services.css";
 const services = [
   {
     number: "01",
-    title: "Growth Marketing",
+    title: "Growth",
+    highlight: "Marketing",
     icon: "↗",
     description: "Smart strategies focused on sustainable brand and business growth.",
     details:
       "We build long-term growth systems, not one-off campaigns. This means mapping your customer journey, identifying the highest-leverage channels for your business, and continuously testing and optimizing so growth compounds over time instead of stalling after a quick spike.",
+    color: "navy",
   },
   {
     number: "02",
-    title: "Performance Marketing",
+    title: "Performance",
+    highlight: "Marketing",
     icon: "◉",
     description: "Result-driven campaigns designed for leads, conversions and sales.",
     details:
       "Every campaign we run is tied to a clear number — leads, sign-ups, or sales. We set up tracking, run structured A/B tests, and reallocate budget toward what is actually converting, so your ad spend keeps getting more efficient month over month.",
+    color: "red",
   },
   {
     number: "03",
-    title: "SEO",
+    title: "",
+    highlight: "SEO",
     subtitle: "Search Engine Optimization",
     icon: "⌕",
     description: "Improve search visibility and help the right people find your brand.",
     details:
       "Our SEO process covers technical audits, keyword research, on-page optimization and content strategy. The goal is sustainable organic traffic — ranking for the searches your ideal customers are already making, so you get consistent visibility without paying for every click.",
+    color: "yellow",
   },
   {
     number: "04",
-    title: "Content Writing",
+    title: "Content",
+    highlight: "Writing",
     icon: "✎",
     description: "Clear, relevant and engaging content created for your audience.",
     details:
       "From blog posts to product pages, we write content that is easy to read and built around what your audience actually searches for and cares about. Every piece is written to inform, build trust, and gently guide the reader toward taking action.",
+    color: "navy",
   },
   {
     number: "05",
-    title: "Social Media Management",
+    title: "Social Media",
+    highlight: "Management",
     icon: "#",
     description: "Consistent social presence, community building and content planning.",
     details:
       "We handle content calendars, post creation, scheduling and community engagement across your key platforms. The focus is consistency and relevance — showing up regularly with content that fits your brand voice and actually resonates with your followers.",
+    color: "red",
   },
   {
     number: "06",
-    title: "Website Optimization",
+    title: "Website",
+    highlight: "Optimization",
     icon: "</>",
     description: "Better website experience, speed and conversion-focused improvements.",
     details:
       "We review your site's speed, structure and user flow to find where visitors drop off. Then we make targeted improvements — faster load times, clearer navigation, and stronger calls to action — so more of your existing traffic turns into real results.",
+    color: "yellow",
   },
 ];
 
@@ -77,7 +89,6 @@ export default function Services() {
           </a>
         </div>
 
-        {/* Clean hero diagram — no circles */}
         <div className="hero-visual" aria-hidden="true">
           <div className="marketing-flow">
             <div className="flow-heading">
@@ -140,27 +151,36 @@ export default function Services() {
 
         <div className="services-grid">
           {services.map((service) => (
-            <article className="service-card" key={service.number}>
-              <div className="service-card-top">
-                <span className="service-number">{service.number}</span>
-                <span className="service-icon">{service.icon}</span>
+            <article
+              className={`service-card card-${service.color}`}
+              key={service.number}
+            >
+              <div className={`service-banner banner-${service.color}`}>
+                <span className="service-banner-icon">{service.icon}</span>
               </div>
 
-              <h3>{service.title}</h3>
+              <div className="service-card-body">
+                <h3>
+                  {service.title}{" "}
+                  <span className={`highlight-pill pill-${service.color}`}>
+                    {service.highlight}
+                  </span>
+                </h3>
 
-              {service.subtitle && (
-                <p className="service-subtitle">{service.subtitle}</p>
-              )}
+                {service.subtitle && (
+                  <p className="service-subtitle">{service.subtitle}</p>
+                )}
 
-              <p className="service-description">{service.description}</p>
+                <p className="service-description">{service.description}</p>
 
-              <button
-                type="button"
-                className="service-learn-more"
-                onClick={() => setActiveService(service)}
-              >
-                Learn More <span>↗</span>
-              </button>
+                <button
+                  type="button"
+                  className={`service-enquire-btn btn-${service.color}`}
+                  onClick={() => setActiveService(service)}
+                >
+                  Learn More <span>↗</span>
+                </button>
+              </div>
             </article>
           ))}
         </div>
@@ -175,7 +195,7 @@ export default function Services() {
             }
           }}
         >
-          <div className="service-modal">
+          <div className={`service-modal modal-${activeService.color}`}>
             <button
               className="service-modal-close"
               onClick={() => setActiveService(null)}
@@ -183,12 +203,11 @@ export default function Services() {
               ✕
             </button>
 
-            <span className="service-modal-number">
-              {activeService.number}
-            </span>
             <span className="service-modal-icon">{activeService.icon}</span>
 
-            <h3>{activeService.title}</h3>
+            <h3>
+              {activeService.title} {activeService.highlight}
+            </h3>
 
             {activeService.subtitle && (
               <p className="service-modal-subtitle">
@@ -198,7 +217,11 @@ export default function Services() {
 
             <p className="service-modal-details">{activeService.details}</p>
 
-            <a href="#contact" onClick={() => setActiveService(null)}>
+            <a
+              href="#contact"
+              className={`service-enquire-btn btn-${activeService.color}`}
+              onClick={() => setActiveService(null)}
+            >
               Start a Project <span>↗</span>
             </a>
           </div>
