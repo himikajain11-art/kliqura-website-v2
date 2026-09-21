@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -7,7 +8,6 @@ import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-
 import logo from "./assets/kliqura-logo.png";
 
 function Header() {

@@ -1,0 +1,72 @@
+.site-header {
+  background: #ffc300; /* school bus yellow */
+  width: 100%;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6%;
+}
+
+.header-logo img {
+  height: 60px;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-link {
+  position: relative;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  padding-bottom: 10px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #051c52;
+}
+
+/* active link — jaisa reference me tha, white text + dot niche */
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e34e4e;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 6%;
+  }
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-logo img {
+    height: 48px;
+  }
+}
