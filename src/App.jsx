@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 
 import Home from "./pages/Home";
@@ -9,93 +9,6 @@ import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import logo from "./assets/kliqura-logo.png";
-
-function Header() {
-  const navLinkStyle = ({ isActive }) => ({
-    color: isActive ? "#ffc300" : "#ffffff",
-    textDecoration: "none",
-    fontWeight: "700",
-  });
-
-  return (
-    <header
-      style={{
-        backgroundColor: "#000000",
-        borderBottom: "1px solid #ffffff33",
-        padding: "12px 7%",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: "20px",
-        position: "sticky",
-        top: 0,
-        zIndex: 100,
-      }}
-    >
-      <Link to="/">
-        <img
-          src={logo}
-          alt="KLIQURA"
-          style={{
-            width: "90px",
-            height: "55px",
-            objectFit: "contain",
-            backgroundColor: "#ffffff",
-            padding: "4px",
-          }}
-        />
-      </Link>
-
-      <nav
-        style={{
-          display: "flex",
-          gap: "18px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          fontSize: "14px",
-        }}
-      >
-        <NavLink style={navLinkStyle} to="/">
-          Home
-        </NavLink>
-
-        <NavLink style={navLinkStyle} to="/about">
-          About
-        </NavLink>
-
-        <NavLink style={navLinkStyle} to="/services">
-          Services
-        </NavLink>
-
-        <NavLink style={navLinkStyle} to="/work">
-          Work
-        </NavLink>
-
-        <NavLink style={navLinkStyle} to="/blog">
-          Blog
-        </NavLink>
-
-        <NavLink style={navLinkStyle} to="/contact">
-          Contact
-        </NavLink>
-      </nav>
-
-      <Link
-        to="/contact"
-        style={{
-          backgroundColor: "#ffc300",
-          color: "#000000",
-          padding: "12px 16px",
-          fontWeight: "800",
-          textDecoration: "none",
-          whiteSpace: "nowrap",
-        }}
-      >
-        Free Audit ↗
-      </Link>
-    </header>
-  );
-}
 
 function Footer() {
   return (
