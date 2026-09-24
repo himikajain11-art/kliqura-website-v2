@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 
 import Home from "./pages/Home";
@@ -227,11 +227,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
