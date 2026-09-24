@@ -33,68 +33,54 @@ function Footer() {
   return (
     <footer className="kliqura-footer">
       <div className="footer-wrap">
-        {/* ROW 1: Logo Card + Congrats Note + Services Columns + Social Icons */}
+        {/* ROW 1: Brand (Left) + Services Grid (Center) + Social Icons (Right) */}
         <div className="footer-main-row">
-          {/* Logo Card with "Say Hi!" bubble */}
-          <div className="footer-brand-box">
-            <div className="footer-logo-card">
-              <span className="footer-speech-bubble">Say Hi! 👋</span>
+          {/* Clean Brand Column on Left (Mess removed) */}
+          <div className="footer-brand-col">
+            <Link to="/" onClick={handleLinkClick} className="footer-logo-link">
               <img
                 src={logo}
-                alt="KLIQURA Logo"
-                className="footer-logo-img"
+                alt="KLIQURA"
+                className="footer-brand-logo"
               />
+            </Link>
+            <p className="footer-brand-tagline">
+              We make your next click count.
+            </p>
+          </div>
+
+          {/* Services Grid with Wide Spacing between Columns */}
+          <div className="footer-services-grid">
+            {/* Column 1 */}
+            <div className="footer-services-col">
+              {servicesCol1.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  onClick={handleLinkClick}
+                  className="service-link"
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
 
-            <div className="footer-congrats-text">
-              <p>
-                Congratulations
-                <br />
-                for traveling from
-                <br />
-                start to the end
-                <br />
-                of this page!
-                <br />
-                We'll add 10,000
-                <br />
-                steps to your
-                <br />
-                fitness tracker!
-              </p>
-              <span className="emoji-icon">🤪</span>
+            {/* Column 2 */}
+            <div className="footer-services-col">
+              {servicesCol2.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  onClick={handleLinkClick}
+                  className="service-link"
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Services Column 1 */}
-          <div className="footer-services-col">
-            {servicesCol1.map((item) => (
-              <Link
-                key={item.title}
-                to={item.path}
-                onClick={handleLinkClick}
-                className="service-link"
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-
-          {/* Services Column 2 */}
-          <div className="footer-services-col">
-            {servicesCol2.map((item) => (
-              <Link
-                key={item.title}
-                to={item.path}
-                onClick={handleLinkClick}
-                className="service-link"
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-
-          {/* Social Media Column */}
+          {/* Social Media Column on Right */}
           <div className="footer-social-icons">
             <a
               href="https://www.instagram.com"
@@ -134,7 +120,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* ROW 2: Bottom Agency Text + Scroll To Top */}
+        {/* ROW 2: Bottom Agency Description + Scroll To Top Button */}
         <div className="footer-bottom-row">
           <p className="footer-bottom-text">
             <strong>KLIQURA</strong> is an integrated social media and digital marketing
