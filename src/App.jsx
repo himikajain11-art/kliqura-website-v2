@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,38 +9,6 @@ import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import logo from "./assets/kliqura-logo.png";
-
-function Footer() {
-  return (
-    <footer
-      style={{
-        backgroundColor: "#051c52",
-        color: "#ffffff",
-        padding: "45px 8%",
-        textAlign: "center",
-      }}
-    >
-      <img
-        src={logo}
-        alt="KLIQURA"
-        style={{
-          width: "100px",
-          backgroundColor: "#ffffff",
-          padding: "5px",
-        }}
-      />
-
-      <h3>KLIQURA — We make it click.</h3>
-
-      <p style={{ color: "#d5dcec" }}>
-        Smart digital marketing for brands ready to grow.
-      </p>
-
-      <p style={{ color: "#ffc300" }}>Udaipur, Rajasthan, India</p>
-    </footer>
-  );
-}
 
 function Chatbot() {
   const [open, setOpen] = useState(false);
@@ -228,10 +197,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about-us" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
 
       <Footer />

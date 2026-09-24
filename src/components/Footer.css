@@ -1,0 +1,283 @@
+/* ===== KLIQURA FOOTER — School Bus Yellow & Deep Navy Branding ===== */
+
+.kliqura-footer {
+  background-color: #ffc300;
+  color: #051c52;
+  padding: 70px 6% 40px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* ===== MAIN TOP GRID ===== */
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr 0.4fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+/* Mascot + Note Container */
+.footer-mascot-box {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Mascot Card (Phone / Frame styled card) */
+.mascot-card {
+  position: relative;
+  width: 145px;
+  height: 195px;
+  background: #051c52;
+  border-radius: 20px;
+  overflow: visible;
+  flex-shrink: 0;
+  box-shadow: 0 12px 28px rgba(5, 28, 82, 0.25);
+  border: 3px solid #051c52;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Mascot image popping out slightly */
+.mascot-img-wrap {
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 30%, #0d2f80 0%, #051c52 100%);
+}
+
+.mascot-img {
+  width: 135%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  transform: translateY(-8px);
+  transition: transform 0.35s ease;
+}
+
+.mascot-card:hover .mascot-img {
+  transform: translateY(-16px) scale(1.05);
+}
+
+/* Red Speech Bubble on Mascot */
+.mascot-speech-bubble {
+  position: absolute;
+  top: 18px;
+  right: -24px;
+  background: #e34e4e;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(227, 78, 78, 0.35);
+  white-space: nowrap;
+  animation: floatBubble 2.5s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+.mascot-speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #e34e4e;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Friendly text next to mascot */
+.footer-congrats-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #051c52;
+  margin: 0;
+  max-width: 250px;
+}
+
+.footer-congrats-text span.emoji {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+/* ===== LINKS COLUMNS ===== */
+.footer-links-col h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #051c52;
+  margin: 0 0 18px 0;
+  text-transform: capitalize;
+  letter-spacing: -0.3px;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-links-col ul li a {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #051c52;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-links-col ul li a:hover {
+  color: #e34e4e;
+  transform: translateX(4px);
+}
+
+/* ===== SOCIAL MEDIA COLUMN ===== */
+.footer-social-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.social-icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  color: #051c52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.social-icon-link:hover {
+  background: #051c52;
+  color: #ffc300;
+  transform: scale(1.15) rotate(4deg);
+  box-shadow: 0 6px 14px rgba(5, 28, 82, 0.25);
+}
+
+/* ===== BOTTOM ROW (Description + Scroll To Top) ===== */
+.footer-bottom-divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(5, 28, 82, 0.15);
+  margin-bottom: 30px;
+}
+
+.footer-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-agency-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #051c52;
+  opacity: 0.9;
+  max-width: 980px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-agency-desc strong {
+  font-weight: 800;
+}
+
+/* Scroll To Top Button */
+.scroll-top-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2.5px solid #051c52;
+  background: transparent;
+  color: #051c52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: #051c52;
+  color: #ffc300;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(5, 28, 82, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .footer-social-col {
+    flex-direction: row;
+    align-items: center;
+    grid-column: span 2;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .kliqura-footer {
+    padding: 50px 6% 30px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-social-col {
+    grid-column: span 1;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .scroll-top-btn {
+    align-self: flex-end;
+  }
+}
