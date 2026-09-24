@@ -1,23 +1,24 @@
-/* ===== KLIQURA HOME PAGE — Black & White primary, Navy/Red/Yellow accents ===== */
+/* ===== KLIQURA HOME PAGE — Deep Navy primary with Strawberry Red & School Bus Yellow accents ===== */
 
 :root {
-  --navy: #051c52;
-  --red: #e34e4e;
-  --yellow: #ffc300;
-  --black: #000000;
+  --navy: #051c52;           /* Deep Navy */
+  --red: #e34e4e;            /* Strawberry Red */
+  --yellow: #ffc300;         /* School Bus Yellow */
   --white: #ffffff;
-  --muted: #666666;
-  --soft-bg: #f7f7f9;
+  --navy-body: #0d286d;      /* Slightly soft navy for readable body text */
+  --muted: #4e6080;          /* Subtle navy-grey for secondary notes */
+  --soft-bg: #f5f7fc;        /* Clean light background */
 }
 
+/* Base text color ab Deep Navy hai (No plain black) */
 .home-page {
   background: var(--white);
-  color: var(--black);
+  color: var(--navy);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 
-/* Headings ab deep navy hain */
+/* Headings + Brand: Manrope */
 .home-page h1,
 .home-page h2,
 .home-page h3 {
@@ -28,22 +29,24 @@
   margin: 0 0 18px 0;
 }
 
+/* Body: Inter (Deep Navy color instead of black) */
 .home-page p {
   font-family: "Inter", sans-serif;
-  color: var(--muted);
+  color: var(--navy-body);
   line-height: 1.65;
 }
 
+/* Category Subtitle: Strawberry Red accent */
 .home-small-title {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1.5px;
   color: var(--red);
   margin-bottom: 14px;
 }
 
-/* ===== Buttons ===== */
+/* ===== Buttons (Font: Inter) ===== */
 .yellow-button,
 .outline-button {
   font-family: "Inter", sans-serif;
@@ -58,26 +61,27 @@
   transition: all 0.25s ease;
 }
 
+/* Yellow Button: School Bus Yellow bg with Deep Navy font */
 .yellow-button {
   background: var(--yellow);
-  color: var(--black);
+  color: var(--navy);
   border: 2px solid var(--yellow);
 }
 .yellow-button:hover {
-  background: var(--black);
+  background: var(--navy);
   color: var(--white);
-  border-color: var(--black);
+  border-color: var(--navy);
 }
 
-/* Secondary button ab black */
+/* Outline / Secondary Button: Deep Navy with White */
 .outline-button {
-  background: var(--black);
+  background: var(--navy);
   color: var(--white);
-  border: 2px solid var(--black);
+  border: 2px solid var(--navy);
 }
 .outline-button:hover {
   background: var(--white);
-  color: var(--black);
+  color: var(--navy);
 }
 
 /* ===== HERO ===== */
@@ -93,8 +97,10 @@
 .home-hero h1 {
   font-size: clamp(48px, 6.2vw, 76px);
   max-width: 640px;
+  color: var(--navy);
 }
 
+/* Red highlighted word in heading */
 .home-hero h1 span {
   color: var(--red);
 }
@@ -103,6 +109,7 @@
   max-width: 500px;
   font-size: 18px;
   margin-bottom: 34px;
+  color: var(--navy-body);
 }
 
 .home-buttons {
@@ -126,11 +133,12 @@
 }
 
 .home-mini-results span {
+  font-family: "Inter", sans-serif;
   font-size: 13px;
   color: var(--muted);
 }
 
-/* ===== RING / DIAGRAM (thoda bada) ===== */
+/* ===== RING / DIAGRAM ===== */
 .home-hero-visual {
   position: relative;
   display: flex;
@@ -140,7 +148,7 @@
 }
 
 .growth-ring {
-  width: 500px;   /* pehle 420px */
+  width: 500px;
   height: 500px;
 }
 
@@ -149,12 +157,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 226px;   /* pehle 190px */
+  width: 226px;
   height: 226px;
   border-radius: 50%;
   background: var(--white);
-  border: 1px solid #eee;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(5, 28, 82, 0.08);
+  box-shadow: 0 10px 30px rgba(5, 28, 82, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,6 +189,7 @@
 }
 
 .ring-center span {
+  font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--red);
@@ -211,6 +220,7 @@
 
 .home-intro h2 {
   font-size: clamp(28px, 3.5vw, 38px);
+  color: var(--navy);
 }
 
 .home-quote {
@@ -231,11 +241,13 @@
 
 .home-services h2 {
   font-size: clamp(28px, 3.5vw, 38px);
+  color: var(--navy);
 }
 
 .section-description {
   max-width: 560px;
   margin: 0 auto 50px;
+  color: var(--navy-body);
 }
 
 .home-service-grid {
@@ -245,33 +257,32 @@
   margin-bottom: 40px;
 }
 
-/* rectangle box hata diya — ab card sirf plain column hai, koi border/shadow/background nahi */
 .home-service-card {
   background: transparent;
   border: none;
   border-radius: 0;
   padding: 0;
-  text-align: left;
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
-/* 3D sphere icons — bada size, brand colors: yellow / navy / red */
+/* 3D Sphere icons with Brand colors */
 .service-icon {
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1;
-  margin-bottom: 26px;
-  color: var(--black);
-  /* 1st circle (SEO) — yellow */
+  margin-bottom: 34px;
+  color: var(--navy);
+  /* 1st circle (SEO) — School Bus Yellow */
   background: radial-gradient(
     circle at 32% 26%,
     #ffe58a 0%,
@@ -286,7 +297,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* glossy shine on top-left — this gives the sphere its 3D look */
 .service-icon::after {
   content: "";
   position: absolute;
@@ -304,7 +314,7 @@
   pointer-events: none;
 }
 
-/* Social Media (beech wala) — deep navy sphere */
+/* Social Media — Deep Navy sphere */
 .home-service-card:nth-child(2) .service-icon {
   color: var(--white);
   background: radial-gradient(
@@ -320,7 +330,7 @@
     0 4px 8px rgba(5, 28, 82, 0.25);
 }
 
-/* Paid Ads — strawberry red sphere */
+/* Paid Ads — Strawberry Red sphere */
 .home-service-card:nth-child(3) .service-icon {
   color: var(--white);
   background: radial-gradient(
@@ -340,29 +350,19 @@
   transform: translateY(-5px) scale(1.06);
 }
 
-/* content ab center-aligned hai, jaisa reference image me hai */
-.home-service-card {
-  align-items: center;
-  text-align: center;
-}
-
-/* circle ab bahut bada — image jaisa hi size */
-.service-icon {
-  width: 260px;
-  height: 260px;
-  font-size: 60px;
-  margin-bottom: 34px;
-}
-
 .home-service-card h3 {
+  font-family: "Manrope", sans-serif;
   font-size: 34px;
+  color: var(--navy);
   margin-bottom: 14px;
 }
 
 .home-service-card p {
+  font-family: "Inter", sans-serif;
   font-size: 17px;
   max-width: 320px;
   margin: 0 auto 20px;
+  color: var(--navy-body);
 }
 
 .home-service-card a {
@@ -373,42 +373,16 @@
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
-  .service-icon {
-    width: 190px;
-    height: 190px;
-    font-size: 46px;
-  }
-  .home-service-card h3 {
-    font-size: 26px;
-  }
-}
-
-@media (max-width: 600px) {
-  .service-icon {
-    width: 150px;
-    height: 150px;
-    font-size: 38px;
-    margin-bottom: 24px;
-  }
-  .home-service-card h3 {
-    font-size: 22px;
-  }
-  .home-service-card p {
-    font-size: 15px;
-  }
-}
-
 .center-button {
   display: flex;
   justify-content: center;
 }
 
-/* ===== RESULTS STRIP (ab black) ===== */
+/* ===== RESULTS STRIP ===== */
 .home-results {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: var(--black);
+  background: var(--navy);
   padding: 60px 7%;
 }
 
@@ -428,14 +402,22 @@
   color: var(--yellow);
 }
 
-.result-box:nth-child(2) strong,
+.result-box:nth-child(2) strong {
+  color: var(--red);
+}
+
+.result-box:nth-child(3) strong {
+  color: var(--yellow);
+}
+
 .result-box:nth-child(4) strong {
   color: var(--white);
 }
 
 .result-box span {
+  font-family: "Inter", sans-serif;
   font-size: 13px;
-  color: #cccccc;
+  color: #e2e8f0;
 }
 
 /* ===== WORK / CASE STUDIES ===== */
@@ -446,6 +428,7 @@
 
 .home-work h2 {
   font-size: clamp(28px, 3.5vw, 38px);
+  color: var(--navy);
   margin-bottom: 50px;
 }
 
@@ -463,7 +446,6 @@
   min-height: 220px;
   display: flex;
   flex-direction: column;
-  color: var(--white);
 }
 
 .work-card small {
@@ -471,17 +453,16 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
-  opacity: 0.85;
 }
 
 .work-card h3 {
-  color: var(--white);
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
   margin: 12px 0 6px;
 }
 
 .work-card p {
-  color: rgba(255, 255, 255, 0.85);
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   margin-bottom: auto;
 }
@@ -492,23 +473,48 @@
   margin-top: 20px;
 }
 
+/* Yellow Card — Deep Navy fonts (replaces black) */
 .yellow-card {
   background: var(--yellow);
-  color: var(--black);
+  color: var(--navy);
+}
+.yellow-card small {
+  color: rgba(5, 28, 82, 0.75);
 }
 .yellow-card h3,
 .yellow-card p,
 .yellow-card strong {
-  color: var(--black);
+  color: var(--navy);
 }
 
+/* Red Card — Strawberry Red with White fonts */
 .red-card {
   background: var(--red);
+  color: var(--white);
+}
+.red-card h3,
+.red-card strong {
+  color: var(--white);
+}
+.red-card p,
+.red-card small {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* navy ab sirf ek jagah accent ki tarah */
+/* Navy Card — Deep Navy with White & Yellow accents */
 .navy-card {
   background: var(--navy);
+  color: var(--white);
+}
+.navy-card h3 {
+  color: var(--white);
+}
+.navy-card strong {
+  color: var(--yellow);
+}
+.navy-card p,
+.navy-card small {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ===== TESTIMONIAL ===== */
@@ -522,6 +528,7 @@
 
 .home-testimonial h2 {
   font-size: clamp(28px, 3.5vw, 38px);
+  color: var(--navy);
   margin-bottom: 50px;
 }
 
@@ -531,8 +538,8 @@
   background: var(--white);
   border-radius: 18px;
   padding: 56px 50px;
-  border: 3px solid var(--black);
-  box-shadow: 10px 10px 0 var(--yellow), 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--navy);
+  box-shadow: 10px 10px 0 var(--yellow), 0 20px 40px rgba(5, 28, 82, 0.1);
   position: relative;
 }
 
@@ -561,7 +568,7 @@
   justify-content: space-between;
   gap: 30px;
   padding: 70px 7%;
-  background: var(--black);
+  background: var(--navy);
   flex-wrap: wrap;
 }
 
@@ -579,6 +586,7 @@
 }
 
 .home-cta h2 {
+  font-family: "Manrope", sans-serif;
   color: var(--white);
   font-size: clamp(22px, 3vw, 30px);
   margin: 0;

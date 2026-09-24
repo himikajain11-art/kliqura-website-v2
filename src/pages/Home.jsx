@@ -80,7 +80,7 @@ function Home() {
               strokeWidth="38"
               strokeLinecap="round"
             />
-            {/* Yellow arc - Website Optimization (bottom-right, reversed for upright text) */}
+            {/* Yellow arc - Website Optimization (bottom-right) */}
             <path
               id="arc-yellow"
               d="M224.31,337.87 A140,140 0 0 0 337.87,224.31"
@@ -89,7 +89,7 @@ function Home() {
               strokeWidth="38"
               strokeLinecap="round"
             />
-            {/* Red arc - Performance Marketing (bottom-left, reversed for upright text) */}
+            {/* Red arc - Performance Marketing (bottom-left) */}
             <path
               id="arc-red"
               d="M62.13,224.31 A140,140 0 0 0 175.69,337.87"
@@ -98,34 +98,38 @@ function Home() {
               strokeWidth="38"
               strokeLinecap="round"
             />
-            {/* Black arc - Social Media Management (top-left) */}
+            {/* Navy / Dark arc - Social Media Management (top-left) */}
             <path
               id="arc-black"
               d="M62.13,175.69 A140,140 0 0 1 175.69,62.13"
               fill="none"
-              stroke="#000000"
+              stroke="#051c52"
               strokeWidth="38"
               strokeLinecap="round"
             />
 
+            {/* Arc Text: White on Navy */}
             <text fontSize="15" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
               <textPath href="#arc-navy" startOffset="50%" textAnchor="middle">
                 SEO
               </textPath>
             </text>
 
-            <text fontSize="14" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#000000">
+            {/* Arc Text: Deep Navy on Yellow arc (Changed from Black to Deep Navy) */}
+            <text fontSize="14" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#051c52">
               <textPath href="#arc-yellow" startOffset="50%" textAnchor="middle">
                 Website Optimization
               </textPath>
             </text>
 
+            {/* Arc Text: White on Strawberry Red */}
             <text fontSize="14" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
               <textPath href="#arc-red" startOffset="50%" textAnchor="middle">
                 Performance Marketing
               </textPath>
             </text>
 
+            {/* Arc Text: White on Navy arc */}
             <text fontSize="13" fontWeight="800" fontFamily="Manrope, sans-serif" fill="#ffffff">
               <textPath href="#arc-black" startOffset="50%" textAnchor="middle">
                 Social Media Management
