@@ -17,13 +17,13 @@
   overflow-x: hidden;
 }
 
-/* Headings ab BLACK (pehle sab navy tha) */
+/* Headings ab deep navy hain */
 .home-page h1,
 .home-page h2,
 .home-page h3 {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
-  color: var(--black);
+  color: var(--navy);
   line-height: 1.15;
   margin: 0 0 18px 0;
 }
@@ -122,10 +122,6 @@
   font-family: "Manrope", sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: var(--black);
-}
-
-.home-mini-results div:nth-child(2) strong {
   color: var(--navy);
 }
 
@@ -181,7 +177,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 19px;
   font-weight: 800;
-  color: var(--black);
+  color: var(--navy);
 }
 
 .ring-center span {
@@ -221,7 +217,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--navy);
   border-left: 4px solid var(--yellow);
   padding-left: 24px;
   line-height: 1.4;
@@ -544,7 +540,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 25px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--navy);
   line-height: 1.5;
   margin-bottom: 24px;
   position: relative;

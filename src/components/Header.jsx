@@ -5,11 +5,11 @@ import logo from "../assets/kliqura-logo.png";
 function Header() {
   const navItems = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
+    { label: "About", to: "/about-us" },
     { label: "Services", to: "/services" },
     { label: "Work", to: "/work" },
     { label: "Blog", to: "/blog" },
-    { label: "Contact", to: "/contact" },
+    { label: "Contact", to: "/contact-us" },
   ];
 
   return (
