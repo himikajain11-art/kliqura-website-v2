@@ -24,9 +24,9 @@ export default function About() {
           </h1>
 
           <p className="about-hero-text">
-            KLIQURA is a trusted digital marketing agency in Udaipur, helping
-            businesses build a strong online presence, acquire high-value customers,
-            and achieve continuous, measurable growth.
+            KLIQURA is a performance-driven digital marketing agency in Udaipur,
+            helping businesses build an unmissable online presence, capture high-intent
+            customers, and achieve continuous, measurable growth.
           </p>
 
           <div className="about-hero-buttons">
@@ -42,9 +42,16 @@ export default function About() {
               Know More
             </a>
           </div>
+
+          {/* Agency Trust Badges */}
+          <div className="about-hero-badges">
+            <span>✓ Google & Meta Standards</span>
+            <span>✓ Data-Driven ROAS</span>
+            <span>✓ Transparent Analytics</span>
+          </div>
         </div>
 
-        {/* ===== ATTRACTIVE PRECISION TARGET DIAGRAM ===== */}
+        {/* ===== CLEAN PRECISION TARGET DIAGRAM (Badges Removed) ===== */}
         <div className="about-target-visual" aria-hidden="true">
           <div className="target-board">
             {/* Ambient Background Glow */}
@@ -54,20 +61,14 @@ export default function About() {
             <div className="target-crosshair target-crosshair-h" />
             <div className="target-crosshair target-crosshair-v" />
 
-            {/* Outer Ring: School Bus Yellow with subtle pulse */}
-            <div className="target-ring target-ring-outer">
-              <span className="target-badge badge-yellow">🎯 Precision</span>
-            </div>
+            {/* Outer Ring: School Bus Yellow */}
+            <div className="target-ring target-ring-outer" />
 
-            {/* Middle Ring: Strawberry Red with accent */}
-            <div className="target-ring target-ring-middle">
-              <span className="target-badge badge-red">📈 High ROI</span>
-            </div>
+            {/* Middle Ring: Strawberry Red */}
+            <div className="target-ring target-ring-middle" />
 
             {/* Inner Ring: Deep Navy */}
-            <div className="target-ring target-ring-inner">
-              <span className="target-badge badge-navy">⚡ Growth</span>
-            </div>
+            <div className="target-ring target-ring-inner" />
 
             {/* Center Bullseye Dot with Ping Waves */}
             <div className="target-center-dot">
@@ -141,6 +142,53 @@ export default function About() {
           <div className="stat-card">
             <strong>Udaipur</strong>
             <span>Headquarters & Global Reach</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== DIGITAL MARKETING: 4-STEP GROWTH FRAMEWORK ===== */}
+      <section className="about-framework-section">
+        <div className="framework-container">
+          <div className="framework-header">
+            <p className="about-eyebrow">HOW WE WORK</p>
+            <h2>The 4-step framework that drives predictable growth.</h2>
+            <p className="framework-subtitle">
+              No guesswork. A battle-tested digital marketing process designed to scale your revenue.
+            </p>
+          </div>
+
+          <div className="framework-grid">
+            <div className="framework-card">
+              <span className="step-num step-yellow">01</span>
+              <h3>Audit & Strategy</h3>
+              <p>
+                We dissect your existing funnels, customer drop-offs, and competitor ads to craft a high-ROI growth roadmap.
+              </p>
+            </div>
+
+            <div className="framework-card">
+              <span className="step-num step-red">02</span>
+              <h3>Creative & Messaging</h3>
+              <p>
+                We develop scroll-stopping creatives, conversion copy, and landing pages that turn cold visitors into buyers.
+              </p>
+            </div>
+
+            <div className="framework-card">
+              <span className="step-num step-navy">03</span>
+              <h3>Targeted Execution</h3>
+              <p>
+                Precision campaign deployment across Google Ads, Meta Ads, and Organic SEO targeting high-intent prospects.
+              </p>
+            </div>
+
+            <div className="framework-card">
+              <span className="step-num step-yellow">04</span>
+              <h3>Scale & Optimize</h3>
+              <p>
+                Continuous multivariate testing, bid optimization, and weekly transparent dashboards to scale your profits.
+              </p>
+            </div>
           </div>
         </div>
       </section>

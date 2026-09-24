@@ -8,7 +8,7 @@
   --navy-body: #102a6b;      /* Highly readable navy body text */
   --navy-muted: #526382;     /* Subtle secondary text */
   --soft-bg: #f5f7fd;        /* Soft, clean background */
-  --border-light: rgba(5, 28, 82, 0.1);
+  --border-light: rgba(5, 28, 82, 0.08);
 }
 
 .about-page {
@@ -120,7 +120,7 @@
   font-size: 18px;
   line-height: 1.7;
   color: var(--navy-body);
-  margin-bottom: 38px;
+  margin-bottom: 34px;
 }
 
 .about-hero-buttons {
@@ -129,7 +129,32 @@
   flex-wrap: wrap;
 }
 
-/* ===== ATTRACTIVE TARGET DIAGRAM ===== */
+/* Trust Badges under Hero Buttons */
+.about-hero-badges {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.about-hero-badges span {
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(5, 28, 82, 0.04);
+  border: 1.5px solid rgba(5, 28, 82, 0.1);
+  padding: 8px 18px;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.about-hero-badges span:hover {
+  background: rgba(255, 195, 0, 0.2);
+  border-color: var(--yellow);
+}
+
+/* ===== CLEAN TARGET BOARD DIAGRAM ===== */
 .about-target-visual {
   display: flex;
   align-items: center;
@@ -222,7 +247,7 @@
   box-shadow: inset 0 0 14px rgba(5, 28, 82, 0.1);
 }
 
-/* Hover effect on entire target */
+/* Interactive Hover effect */
 .target-board:hover .target-ring-outer {
   transform: scale(1.03);
 }
@@ -272,40 +297,6 @@
     transform: scale(2.4);
     opacity: 0;
   }
-}
-
-/* Floating Micro-Badges around target */
-.target-badge {
-  position: absolute;
-  font-family: "Manrope", sans-serif;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 5px 12px;
-  border-radius: 20px;
-  white-space: nowrap;
-  box-shadow: 0 6px 16px rgba(5, 28, 82, 0.12);
-  z-index: 3;
-}
-
-.badge-yellow {
-  top: 10px;
-  right: 18px;
-  background: var(--yellow);
-  color: var(--navy);
-}
-
-.badge-red {
-  bottom: 18px;
-  left: 10px;
-  background: var(--red);
-  color: var(--white);
-}
-
-.badge-navy {
-  top: 8px;
-  left: 14px;
-  background: var(--navy);
-  color: var(--white);
 }
 
 /* ===== WHO WE ARE / OVERVIEW ===== */
@@ -437,6 +428,94 @@
   font-weight: 500;
 }
 
+/* ===== DIGITAL MARKETING: 4-STEP GROWTH FRAMEWORK ===== */
+.about-framework-section {
+  padding: 110px 8%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.framework-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.framework-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 65px;
+}
+
+.framework-header h2 {
+  font-size: clamp(32px, 3.8vw, 46px);
+  margin-bottom: 16px;
+}
+
+.framework-subtitle {
+  font-size: 17px;
+  color: var(--navy-body);
+  margin: 0;
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.framework-card {
+  background: var(--soft-bg);
+  border: 2px solid rgba(5, 28, 82, 0.08);
+  border-radius: 18px;
+  padding: 38px 28px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.framework-card:hover {
+  transform: translateY(-8px);
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(5, 28, 82, 0.1);
+  border-color: var(--navy);
+}
+
+.step-num {
+  font-family: "Manrope", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.step-yellow {
+  color: var(--yellow);
+}
+
+.step-red {
+  color: var(--red);
+}
+
+.step-navy {
+  color: var(--navy);
+}
+
+.framework-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.framework-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+  color: var(--navy-body);
+}
+
 /* ===== WHY KLIQURA / VALUES ===== */
 .about-values-section {
   padding: 110px 8%;
@@ -464,7 +543,7 @@
 .about-values-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px; /* Proper, generous distance between cards */
+  gap: 36px;
 }
 
 .value-card {
@@ -484,7 +563,6 @@
   box-shadow: 0 16px 36px rgba(5, 28, 82, 0.12);
 }
 
-/* Featured Middle Card */
 .value-card-featured {
   background: var(--navy);
   border-color: var(--navy);
@@ -573,6 +651,12 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1150px) {
+  .framework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1050px) {
   .about-hero {
     grid-template-columns: 1fr;
@@ -584,7 +668,8 @@
     flex-direction: column;
     align-items: center;
   }
-  .about-hero-buttons {
+  .about-hero-buttons,
+  .about-hero-badges {
     justify-content: center;
   }
   .overview-main {
@@ -627,6 +712,9 @@
   .target-core {
     width: 26px;
     height: 26px;
+  }
+  .framework-grid {
+    grid-template-columns: 1fr;
   }
   .stats-container {
     grid-template-columns: 1fr;
