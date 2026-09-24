@@ -1,76 +1,68 @@
-/* ===== KLIQURA FOOTER — School Bus Yellow & Deep Navy Branding ===== */
+/* ===== KLIQURA FOOTER — Clean Social Panga Inspired Style ===== */
 
 .kliqura-footer {
   background-color: #ffc300;
   color: #051c52;
-  padding: 70px 6% 40px;
-  position: relative;
+  padding: 85px 7% 45px;
   font-family: "Inter", sans-serif;
-  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-/* ===== MAIN TOP GRID ===== */
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1.2fr 0.4fr;
-  gap: 40px;
+.footer-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== ROW 1: Logo + Note + Services + Social ===== */
+.footer-main-row {
+  display: flex;
   align-items: flex-start;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* Mascot + Note Container */
-.footer-mascot-box {
+/* Logo Card + Congrats Text */
+.footer-brand-box {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
+  max-width: 420px;
 }
 
-/* Mascot Card (Phone / Frame styled card) */
-.mascot-card {
+/* Logo Card */
+.footer-logo-card {
   position: relative;
-  width: 145px;
-  height: 195px;
+  width: 135px;
+  height: 175px;
   background: #051c52;
-  border-radius: 20px;
-  overflow: visible;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(5, 28, 82, 0.22);
   flex-shrink: 0;
-  box-shadow: 0 12px 28px rgba(5, 28, 82, 0.25);
-  border: 3px solid #051c52;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
 
-/* Mascot image popping out slightly */
-.mascot-img-wrap {
-  width: 100%;
-  height: 100%;
-  border-radius: 17px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: radial-gradient(circle at 50% 30%, #0d2f80 0%, #051c52 100%);
-}
-
-.mascot-img {
-  width: 135%;
+.footer-logo-img {
+  width: 90%;
   height: auto;
-  max-width: none;
   object-fit: contain;
-  transform: translateY(-8px);
-  transition: transform 0.35s ease;
+  filter: brightness(0) invert(1); /* Crisp white logo on deep navy */
+  transition: transform 0.3s ease;
 }
 
-.mascot-card:hover .mascot-img {
-  transform: translateY(-16px) scale(1.05);
+.footer-logo-card:hover .footer-logo-img {
+  transform: scale(1.08);
 }
 
-/* Red Speech Bubble on Mascot */
-.mascot-speech-bubble {
+/* Red Speech Bubble */
+.footer-speech-bubble {
   position: absolute;
-  top: 18px;
-  right: -24px;
+  top: 14px;
+  right: -16px;
   background: #e34e4e;
   color: #ffffff;
   font-family: "Manrope", sans-serif;
@@ -78,206 +70,187 @@
   font-weight: 800;
   padding: 6px 14px;
   border-radius: 20px;
-  box-shadow: 0 6px 14px rgba(227, 78, 78, 0.35);
+  box-shadow: 0 4px 12px rgba(227, 78, 78, 0.35);
   white-space: nowrap;
-  animation: floatBubble 2.5s ease-in-out infinite alternate;
   z-index: 2;
 }
 
-.mascot-speech-bubble::after {
+.footer-speech-bubble::after {
   content: "";
   position: absolute;
   bottom: -5px;
-  left: 12px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #e34e4e;
+  left: 14px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #e34e4e;
 }
 
-@keyframes floatBubble {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Friendly text next to mascot */
+/* Congrats Text */
 .footer-congrats-text {
-  font-family: "Manrope", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1.45;
   color: #051c52;
   margin: 0;
-  max-width: 250px;
 }
 
-.footer-congrats-text span.emoji {
+.footer-congrats-text .emoji-icon {
   display: inline-block;
   font-size: 22px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
-/* ===== LINKS COLUMNS ===== */
-.footer-links-col h4 {
+/* ===== SERVICES COLUMNS (Generous Spacing & Clean) ===== */
+.footer-services-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Proper distance between each service */
+  padding-top: 10px;
+}
+
+.service-link {
   font-family: "Manrope", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
   color: #051c52;
-  margin: 0 0 18px 0;
-  text-transform: capitalize;
-  letter-spacing: -0.3px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
 }
 
-.footer-links-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.service-link:hover {
+  color: #e34e4e;
+  transform: translateX(5px);
+}
+
+/* ===== SOCIAL MEDIA ICONS (Vertical Column) ===== */
+.footer-social-icons {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 24px;
+  align-items: center;
+  padding-top: 8px;
 }
 
-.footer-links-col ul li a {
-  font-family: "Manrope", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+.footer-social-icons a {
+  font-size: 24px;
   color: #051c52;
   text-decoration: none;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.footer-links-col ul li a:hover {
-  color: #e34e4e;
-  transform: translateX(4px);
-}
-
-/* ===== SOCIAL MEDIA COLUMN ===== */
-.footer-social-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 18px;
-}
-
-.social-icon-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: transparent;
-  color: #051c52;
+  transition: transform 0.2s ease, color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  border: 2px solid transparent;
 }
 
-.social-icon-link:hover {
-  background: #051c52;
-  color: #ffc300;
-  transform: scale(1.15) rotate(4deg);
-  box-shadow: 0 6px 14px rgba(5, 28, 82, 0.25);
+.footer-social-icons a:hover {
+  color: #e34e4e;
+  transform: scale(1.22);
 }
 
-/* ===== BOTTOM ROW (Description + Scroll To Top) ===== */
-.footer-bottom-divider {
-  width: 100%;
-  height: 2px;
-  background-color: rgba(5, 28, 82, 0.15);
-  margin-bottom: 30px;
-}
-
+/* ===== ROW 2: Bottom Agency Text + Scroll To Top ===== */
 .footer-bottom-row {
+  margin-top: 70px;
+  padding-top: 25px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
 }
 
-.footer-agency-desc {
+.footer-bottom-text {
   font-family: "Inter", sans-serif;
-  font-size: 13.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.7;
   color: #051c52;
-  opacity: 0.9;
-  max-width: 980px;
+  max-width: 1000px;
   margin: 0;
   font-weight: 500;
 }
 
-.footer-agency-desc strong {
+.footer-bottom-text strong {
   font-weight: 800;
 }
 
-/* Scroll To Top Button */
-.scroll-top-btn {
+/* Scroll To Top Round Button */
+.footer-scroll-top-btn {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2.5px solid #051c52;
+  border: 2px solid #051c52;
   background: transparent;
   color: #051c52;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 19px;
+  font-size: 18px;
   cursor: pointer;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
-.scroll-top-btn:hover {
+.footer-scroll-top-btn:hover {
   background: #051c52;
   color: #ffc300;
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(5, 28, 82, 0.2);
+  box-shadow: 0 8px 18px rgba(5, 28, 82, 0.25);
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .footer-top-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
+@media (max-width: 1100px) {
+  .footer-main-row {
+    gap: 30px;
   }
-  .footer-social-col {
-    flex-direction: row;
-    align-items: center;
-    grid-column: span 2;
-    justify-content: flex-start;
+  .footer-brand-box {
+    max-width: 360px;
+  }
+  .service-link {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .kliqura-footer {
-    padding: 50px 6% 30px;
+    padding: 60px 6% 35px;
   }
-
-  .footer-top-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .footer-main-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
   }
-
-  .footer-social-col {
-    grid-column: span 1;
+  .footer-brand-box {
+    grid-column: span 2;
+    max-width: 100%;
   }
-
+  .footer-social-icons {
+    flex-direction: row;
+    grid-column: span 2;
+    justify-content: flex-start;
+    gap: 26px;
+  }
   .footer-bottom-row {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 24px;
+    margin-top: 45px;
   }
-
-  .scroll-top-btn {
+  .footer-scroll-top-btn {
     align-self: flex-end;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-main-row {
+    grid-template-columns: 1fr;
+  }
+  .footer-brand-box {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-services-col {
+    gap: 20px;
   }
 }
