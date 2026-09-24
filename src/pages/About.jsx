@@ -1,243 +1,160 @@
-import { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+import React from "react";
+import "./About.css";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Work from "./pages/Work";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import logo from "./assets/kliqura-logo.png";
-
-function Footer() {
+export default function About() {
   return (
-    <footer
-      style={{
-        backgroundColor: "#051c52",
-        color: "#ffffff",
-        padding: "45px 8%",
-        textAlign: "center",
-      }}
-    >
-      <img
-        src={logo}
-        alt="KLIQURA"
-        style={{
-          width: "100px",
-          backgroundColor: "#ffffff",
-          padding: "5px",
-        }}
-      />
+    <main className="about-page">
+      {/* HERO */}
+      <section className="about-hero">
+        <div className="about-hero-content">
+          <p className="about-eyebrow">ABOUT KLIQURA • UDAIPUR</p>
 
-      <h3>KLIQURA — We make it click.</h3>
+          <h1>
+            Strategy that finds
+            <span> the right target.</span>
+          </h1>
 
-      <p style={{ color: "#d5dcec" }}>
-        Smart digital marketing for brands ready to grow.
-      </p>
+          <p className="about-hero-text">
+            KLIQURA is a trusted digital marketing agency in Udaipur, helping
+            businesses build a strong online presence and achieve continuous
+            growth.
+          </p>
 
-      <p style={{ color: "#ffc300" }}>Udaipur, Rajasthan, India</p>
-    </footer>
-  );
-}
+          <div className="about-hero-buttons">
+            <a href="#contact" className="about-primary-button">
+              Get Free Audit <span>↗</span>
+            </a>
 
-function Chatbot() {
-  const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState("");
-
-  const [messages, setMessages] = useState([
-    {
-      sender: "bot",
-      text: "Hi! I am Kli from KLIQURA. Ask me about SEO, paid ads, social media, services, or a free audit.",
-    },
-  ]);
-
-  function getReply(userMessage) {
-    const text = userMessage.toLowerCase();
-
-    if (text.includes("seo")) {
-      return "KLIQURA helps with keyword research, on-page SEO, local SEO, and technical improvements to improve your Google visibility.";
-    }
-
-    if (text.includes("paid") || text.includes("ads") || text.includes("advertising")) {
-      return "We create and optimise Google Ads and Meta Ads campaigns focused on quality leads, website traffic, and better ROI.";
-    }
-
-    if (text.includes("social")) {
-      return "We manage Instagram, Facebook, and LinkedIn with content strategy, creative posts, and audience engagement.";
-    }
-
-    if (text.includes("service")) {
-      return "Our services include Growth Marketing, Performance Marketing, SEO, Content Writing, Copywriting, Graphic Design, Social Media Management, Paid Advertising, and Website Optimisation.";
-    }
-
-    if (text.includes("audit") || text.includes("price") || text.includes("contact")) {
-      return "You can request a free audit from the Contact page. Tell us about your business and KLIQURA will get back to you.";
-    }
-
-    if (text.includes("hello") || text.includes("hi")) {
-      return "Hello! Welcome to KLIQURA. How can we help your brand grow today?";
-    }
-
-    return "Thanks for your message! For a personalised strategy, please fill out the Contact form and our KLIQURA team will connect with you.";
-  }
-
-  function sendMessage() {
-    if (message.trim() === "") return;
-
-    const userMessage = message;
-
-    setMessages([
-      ...messages,
-      { sender: "user", text: userMessage },
-      { sender: "bot", text: getReply(userMessage) },
-    ]);
-
-    setMessage("");
-  }
-
-  return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        style={{
-          position: "fixed",
-          right: "22px",
-          bottom: "22px",
-          width: "55px",
-          height: "55px",
-          borderRadius: "50%",
-          border: "none",
-          backgroundColor: "#e34e4e",
-          color: "#ffffff",
-          fontSize: "22px",
-          zIndex: 200,
-          cursor: "pointer",
-        }}
-      >
-        💬
-      </button>
-
-      {open && (
-        <div
-          style={{
-            position: "fixed",
-            right: "22px",
-            bottom: "90px",
-            width: "320px",
-            backgroundColor: "#ffffff",
-            color: "#000000",
-            borderRadius: "10px",
-            overflow: "hidden",
-            zIndex: 200,
-            boxShadow: "0 10px 30px #00000066",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "#051c52",
-              color: "#ffffff",
-              padding: "15px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <strong>Chat with Kli</strong>
-
-            <button
-              onClick={() => setOpen(false)}
-              style={{
-                border: "none",
-                backgroundColor: "transparent",
-                color: "#ffffff",
-                fontSize: "20px",
-                cursor: "pointer",
-              }}
-            >
-              ×
-            </button>
-          </div>
-
-          <div
-            style={{
-              height: "250px",
-              overflowY: "auto",
-              padding: "15px",
-            }}
-          >
-            {messages.map((item, index) => (
-              <p
-                key={index}
-                style={{
-                  backgroundColor:
-                    item.sender === "bot" ? "#eeeeee" : "#ffc300",
-                  padding: "10px",
-                  borderRadius: "8px",
-                  marginLeft: item.sender === "user" ? "35px" : "0",
-                  marginRight: item.sender === "bot" ? "35px" : "0",
-                  fontSize: "13px",
-                  lineHeight: "1.5",
-                }}
-              >
-                {item.text}
-              </p>
-            ))}
-          </div>
-
-          <div style={{ display: "flex", padding: "10px", gap: "8px" }}>
-            <input
-              type="text"
-              placeholder="Type your message..."
-              value={message}
-              onChange={(event) => setMessage(event.target.value)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter") sendMessage();
-              }}
-              style={{
-                flex: 1,
-                padding: "10px",
-                border: "1px solid #cccccc",
-              }}
-            />
-
-            <button
-              onClick={sendMessage}
-              style={{
-                backgroundColor: "#ffc300",
-                border: "none",
-                padding: "10px 14px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              Send
-            </button>
+            <a href="#about-content" className="about-outline-button">
+              Know More
+            </a>
           </div>
         </div>
-      )}
-    </>
+
+        {/* Plain Target Board */}
+        <div className="about-target-visual" aria-hidden="true">
+          <div className="target-board">
+            <div className="target-ring target-ring-outer" />
+            <div className="target-ring target-ring-middle" />
+            <div className="target-ring target-ring-inner" />
+            <div className="target-center-dot" />
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE ARE */}
+      <section className="about-overview-section" id="about-content">
+        <div className="overview-top">
+          <p className="about-eyebrow">WHO WE ARE</p>
+        </div>
+
+        <div className="overview-main">
+          <div className="overview-title-wrap">
+            <span className="overview-number">01</span>
+
+            <h2>
+              Your growth is
+              <span> our focus.</span>
+            </h2>
+          </div>
+
+          <div className="overview-content">
+            <p>
+              KLIQURA is a trusted digital marketing agency from Udaipur,
+              focused on helping startups and local businesses grow online. We
+              are dedicated to helping businesses build a strong online presence
+              and achieve continuous growth. We use creative ideas, marketing
+              strategy and data analytics to create effective campaigns that
+              reach the right audience.
+            </p>
+
+            <p>
+              Whether you are a startup or a local business, our digital
+              marketing solutions are designed to help you stand out in a
+              competitive landscape. Before starting any campaign, we
+              understand your target audience and business objectives so that
+              we can create the right strategy for your business.
+            </p>
+
+            <a href="#contact" className="overview-link">
+              Talk To Our Team <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY KLIQURA */}
+      <section className="about-values-section">
+        <div className="about-values-heading">
+          <p className="about-eyebrow">WHY KLIQURA</p>
+
+          <h2>
+            The way we help
+            <span> brands grow.</span>
+          </h2>
+
+          <p>
+            We combine clear strategy, creative thinking and
+            performance-focused execution to help businesses grow with
+            confidence.
+          </p>
+        </div>
+
+        <div className="about-values-cards">
+          <article className="value-card">
+            <div className="value-icon">◎</div>
+
+            <h3>Think Smart</h3>
+
+            <p>
+              We understand your business, target audience and goals before
+              building a strategy that works for you.
+            </p>
+          </article>
+
+          <article className="value-card value-card-featured">
+            <div className="value-icon">↗</div>
+
+            <h3>Grow Better</h3>
+
+            <p>
+              Our creative ideas, data analytics and focused marketing help
+              your brand achieve meaningful and measurable growth.
+            </p>
+          </article>
+
+          <article className="value-card">
+            <div className="value-icon">✦</div>
+
+            <h3>Stay Visible</h3>
+
+            <p>
+              We help you build a strong online presence that keeps your brand
+              visible, consistent and memorable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="about-final-section" id="contact">
+        <p className="about-eyebrow">WHY KLIQURA?</p>
+
+        <h2>
+          Looking for a trusted digital marketing agency
+          <span> in Udaipur?</span>
+        </h2>
+
+        <p className="about-final-text">
+          KLIQURA is the right choice for your business. Our goal is to build
+          brand awareness, attract the right audience and deliver real growth
+          through creative ideas and effective digital strategies.
+        </p>
+
+        <a href="mailto:hello@kliqura.com" className="about-primary-button">
+          Let&apos;s Work Together <span>↗</span>
+        </a>
+      </section>
+    </main>
   );
 }
-
-function App() {
-  return (
-    <>
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-
-      <Footer />
-      <Chatbot />
-    </>
-  );
-}
-
-export default App;
