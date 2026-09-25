@@ -177,7 +177,7 @@ export default function Services() {
             onClick={scrollToFunnel}
             className="services-outline-btn"
           >
-            See The Revenue Funnel ↓
+            See The Marketing Difference ↓
           </a>
         </div>
       </section>
@@ -236,259 +236,339 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ===== PART 2: 3D REVENUE MARKETING FUNNEL DIAGRAM ===== */}
+      {/* ===== PART 2: THE 3D FUNNEL COMPARISON (Traditional vs Revenue Marketing) ===== */}
       <section className="services-comparison-section" id="revenue-funnel">
         <div className="comparison-container">
           <div className="comparison-header">
-            <p className="services-eyebrow">THE KLIQURA ADVANTAGE</p>
+            <p className="services-eyebrow">THE KLIQURA DIFFERENCE</p>
             <h2>
               Move From Marketing that Reports Clicks to{" "}
               <span>Marketing that Reports Revenue</span>
             </h2>
             <p className="comparison-subtitle">
-              Traditional marketing optimizes for channel metrics. KLIQURA optimizes for business impact
-              with a connected 3D growth system.
+              Traditional marketing optimizes for channel metrics. KLIQURA connects your whole
+              digital ecosystem to drive actual bottom-line growth.
             </p>
           </div>
 
-          {/* ===== 3D CONICAL FUNNEL CONTAINER ===== */}
-          <div className="funnel-showcase-card">
-            {/* Top Pill Header */}
-            <div className="funnel-top-badge-wrap">
-              <span className="funnel-top-badge">REVENUE MARKETING</span>
-            </div>
+          {/* ===== SIDE-BY-SIDE 3D FUNNEL SHOWCASE ===== */}
+          <div className="funnel-comparison-stage">
+            <div className="funnel-comparison-grid">
+              {/* ===== LEFT: 3D CRACKED FUNNEL (Traditional Marketing - Photo 1) ===== */}
+              <div className="funnel-col col-traditional">
+                <div className="funnel-col-header">
+                  <span className="col-badge badge-traditional">TRADITIONAL MARKETING</span>
+                </div>
 
-            {/* Visual 3D Funnel with Curved Script Callout */}
-            <div className="funnel-3d-visual-wrapper">
-              <svg
-                viewBox="0 0 560 520"
-                className="funnel-3d-svg-canvas"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <defs>
-                  {/* Drop Shadow Filter */}
-                  <filter id="funnelDropShadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="16" stdDeviation="20" floodColor="#051c52" floodOpacity="0.25" />
-                  </filter>
+                <div className="funnel-svg-wrapper">
+                  <svg
+                    viewBox="0 0 460 480"
+                    className="funnel-single-svg"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <defs>
+                      <filter id="shadowTrad" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="16" stdDeviation="18" floodColor="#000000" floodOpacity="0.25" />
+                      </filter>
 
-                  {/* Cavity Inner Shadow Gradient */}
-                  <radialGradient id="innerCavityGrad" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#010614" />
-                    <stop offset="70%" stopColor="#051538" />
-                    <stop offset="100%" stopColor="#0a2560" />
-                  </radialGradient>
+                      {/* Charcoal 3D Metallic Gradients */}
+                      <linearGradient id="charcoalTier1" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#475569" />
+                        <stop offset="35%" stopColor="#334155" />
+                        <stop offset="100%" stopColor="#1e293b" />
+                      </linearGradient>
+                      <linearGradient id="charcoalTier2" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#3b485c" />
+                        <stop offset="35%" stopColor="#293548" />
+                        <stop offset="100%" stopColor="#141d2b" />
+                      </linearGradient>
+                      <linearGradient id="charcoalTier3" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#334155" />
+                        <stop offset="35%" stopColor="#1e293b" />
+                        <stop offset="100%" stopColor="#0f172a" />
+                      </linearGradient>
+                      <linearGradient id="charcoalTier4" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#1e293b" />
+                        <stop offset="45%" stopColor="#0f172a" />
+                        <stop offset="100%" stopColor="#020617" />
+                      </linearGradient>
+                      <radialGradient id="charcoalCavity" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stopColor="#020617" />
+                        <stop offset="75%" stopColor="#0f172a" />
+                        <stop offset="100%" stopColor="#1e293b" />
+                      </radialGradient>
+                    </defs>
 
-                  {/* Tier 1: Deep Navy 3D Gradient */}
-                  <linearGradient id="tierNavyGrad" x1="0%" y1="0%" x2="100%" y2="80%">
-                    <stop offset="0%" stopColor="#1e4ec8" />
-                    <stop offset="25%" stopColor="#0c328e" />
-                    <stop offset="70%" stopColor="#051c52" />
-                    <stop offset="100%" stopColor="#020e2b" />
-                  </linearGradient>
+                    {/* 3D Funnel Body */}
+                    <g filter="url(#shadowTrad)">
+                      {/* Top Hollow Cavity Rim */}
+                      <ellipse cx="230" cy="55" rx="190" ry="40" fill="url(#charcoalCavity)" />
+                      <ellipse cx="230" cy="55" rx="190" ry="40" fill="none" stroke="#64748b" strokeWidth="2.5" opacity="0.4" />
 
-                  {/* Tier 2: School Bus Yellow 3D Gradient */}
-                  <linearGradient id="tierYellowGrad" x1="0%" y1="0%" x2="100%" y2="80%">
-                    <stop offset="0%" stopColor="#fff099" />
-                    <stop offset="25%" stopColor="#ffc91a" />
-                    <stop offset="70%" stopColor="#ffc300" />
-                    <stop offset="100%" stopColor="#d49500" />
-                  </linearGradient>
+                      {/* Tier 1 */}
+                      <path
+                        d="M 40,55 C 40,90 420,90 420,55 L 388,145 C 365,174 95,174 72,145 Z"
+                        fill="url(#charcoalTier1)"
+                      />
 
-                  {/* Tier 3: Strawberry Red 3D Gradient */}
-                  <linearGradient id="tierRedGrad" x1="0%" y1="0%" x2="100%" y2="80%">
-                    <stop offset="0%" stopColor="#fb7185" />
-                    <stop offset="25%" stopColor="#ef4444" />
-                    <stop offset="70%" stopColor="#e34e4e" />
-                    <stop offset="100%" stopColor="#991b1b" />
-                  </linearGradient>
+                      {/* Tier 2 */}
+                      <path
+                        d="M 70,143 C 95,174 365,174 390,143 L 352,240 C 330,268 130,268 108,240 Z"
+                        fill="url(#charcoalTier2)"
+                      />
 
-                  {/* Tier 4: Deep Navy Cone Apex Gradient */}
-                  <linearGradient id="tierApexGrad" x1="0%" y1="0%" x2="100%" y2="80%">
-                    <stop offset="0%" stopColor="#1d4ed8" />
-                    <stop offset="40%" stopColor="#0c2f7d" />
-                    <stop offset="85%" stopColor="#051c52" />
-                    <stop offset="100%" stopColor="#020a1c" />
-                  </linearGradient>
+                      {/* Tier 3 */}
+                      <path
+                        d="M 106,238 C 130,268 330,268 354,238 L 312,336 C 294,362 166,362 148,336 Z"
+                        fill="url(#charcoalTier3)"
+                      />
 
-                  {/* Rim Bevel Gloss */}
-                  <linearGradient id="rimGlossGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.6" />
-                    <stop offset="40%" stopColor="#60a5fa" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#051c52" stopOpacity="0.1" />
-                  </linearGradient>
-                </defs>
+                      {/* Tier 4 (Apex) */}
+                      <path
+                        d="M 146,334 C 166,362 294,362 314,334 L 265,446 C 252,468 208,468 195,446 Z"
+                        fill="url(#charcoalTier4)"
+                      />
 
-                {/* ===== 3D FUNNEL BODY ===== */}
-                <g filter="url(#funnelDropShadow)">
-                  {/* Top Hollow Cavity Rim */}
-                  <ellipse cx="280" cy="80" rx="195" ry="42" fill="url(#innerCavityGrad)" />
-                  <ellipse cx="280" cy="80" rx="195" ry="42" fill="none" stroke="url(#rimGlossGrad)" strokeWidth="3" />
+                      {/* Sharp Jagged 3D Cracks Running Through Tiers */}
+                      <path
+                        d="M 175,40 L 205,95 L 190,118 L 225,165 L 208,198 L 220,248 L 198,276 L 216,338 L 194,362 L 225,418 L 218,446"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="6"
+                        strokeLinecap="round"
+                        strokeLinejoin="miter"
+                      />
+                      <path
+                        d="M 175,40 L 205,95 L 190,118 L 225,165 L 208,198 L 220,248 L 198,276 L 216,338 L 194,362 L 225,418 L 218,446"
+                        fill="none"
+                        stroke="#ef4444"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="miter"
+                        opacity="0.85"
+                      />
+                      {/* Secondary Crack Branch */}
+                      <path
+                        d="M 205,95 L 235,115 L 255,135"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="4"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M 208,198 L 240,215 L 250,230"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
 
-                  {/* ===== TIER 1: VISIBILITY (Deep Navy) ===== */}
-                  <path
-                    d="M 85,80 C 85,115 475,115 475,80 L 442,168 C 420,196 140,196 118,168 Z"
-                    fill="url(#tierNavyGrad)"
-                  />
-                  {/* Tier 1 Bevel Line */}
-                  <path
-                    d="M 85,80 C 85,118 475,118 475,80"
-                    fill="none"
-                    stroke="#38bdf8"
-                    strokeWidth="2.5"
-                    opacity="0.4"
-                  />
-                  {/* Tier 1 Content: Eye Icon + Text */}
-                  <g className="tier-content" transform="translate(280, 138)">
-                    {/* SVG Eye Icon */}
-                    <path
-                      d="M -50,-2 C -35,-16 -15,-22 0,-22 C 15,-22 35,-16 50,-2 C 35,12 15,18 0,18 C -15,18 -35,12 -50,-2 Z"
-                      fill="none"
-                      stroke="#ffffff"
-                      strokeWidth="3"
-                    />
-                    <circle cx="0" cy="-2" r="7.5" fill="#ffffff" />
-                    {/* Text */}
-                    <text
-                      x="0"
-                      y="16"
-                      textAnchor="middle"
-                      fill="#ffffff"
-                      fontFamily="Manrope, sans-serif"
-                      fontSize="20"
-                      fontWeight="800"
-                      letterSpacing="0.5"
-                    >
-                      Visibility
-                    </text>
-                  </g>
+                {/* Clean Points Below Traditional Funnel */}
+                <div className="funnel-points-card points-traditional">
+                  <h4>The Leaky Funnel Model</h4>
+                  <ul className="funnel-card-list">
+                    <li>
+                      <span className="bullet-x">✕</span>
+                      <strong>Disconnected Siloed Channels:</strong> SEO, ads, and web work separately without unified data.
+                    </li>
+                    <li>
+                      <span className="bullet-x">✕</span>
+                      <strong>Vanity Metrics:</strong> Focuses on empty impressions and clicks that do not produce sales.
+                    </li>
+                    <li>
+                      <span className="bullet-x">✕</span>
+                      <strong>Budget Wastage:</strong> High ad spend leaks through drop-offs before prospects ever convert.
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-                  {/* ===== TIER 2: TRAFFIC (School Bus Yellow) ===== */}
-                  <path
-                    d="M 116,166 C 140,196 420,196 444,166 L 406,260 C 385,286 175,286 154,260 Z"
-                    fill="url(#tierYellowGrad)"
-                  />
-                  {/* Tier 2 Top Shadow Lip */}
-                  <path
-                    d="M 116,166 C 140,196 420,196 444,166"
-                    fill="none"
-                    stroke="#b45309"
-                    strokeWidth="3.5"
-                    opacity="0.3"
-                  />
-                  {/* Tier 2 Content: Cursor Arrow + Text */}
-                  <g className="tier-content" transform="translate(280, 226)">
-                    {/* Cursor Pointer Icon */}
-                    <path
-                      d="M -48,-16 L -35,10 L -40,3 L -48,-16 Z"
-                      fill="#051c52"
-                    />
-                    <path
-                      d="M -48,-16 L -35,10 L -39,4 L -32,15 L -35,16 L -42,5 L -45,10 Z"
-                      fill="#051c52"
-                    />
-                    {/* Text */}
-                    <text
-                      x="0"
-                      y="6"
-                      textAnchor="middle"
-                      fill="#051c52"
-                      fontFamily="Manrope, sans-serif"
-                      fontSize="20"
-                      fontWeight="800"
-                      letterSpacing="0.5"
-                    >
-                      Traffic
-                    </text>
-                  </g>
+              {/* ===== CENTER VS DIVIDER ===== */}
+              <div className="funnel-vs-divider">
+                <div className="vs-badge">VS</div>
+              </div>
 
-                  {/* ===== TIER 3: LEADS (Strawberry Red) ===== */}
-                  <path
-                    d="M 152,258 C 175,286 385,286 408,258 L 366,354 C 348,378 212,378 194,354 Z"
-                    fill="url(#tierRedGrad)"
-                  />
-                  {/* Tier 3 Top Shadow Lip */}
-                  <path
-                    d="M 152,258 C 175,286 385,286 408,258"
-                    fill="none"
-                    stroke="#7f1d1d"
-                    strokeWidth="3.5"
-                    opacity="0.35"
-                  />
-                  {/* Tier 3 Content: People Group Icon + Text */}
-                  <g className="tier-content" transform="translate(280, 318)">
-                    {/* People Icon */}
-                    <circle cx="-38" cy="-8" r="5" fill="#ffffff" />
-                    <path d="M -47,5 C -47,0 -43,-3 -38,-3 C -33,-3 -29,0 -29,5" fill="#ffffff" />
-                    <circle cx="-25" cy="-8" r="4" fill="#ffffff" opacity="0.85" />
-                    <path d="M -21,5 C -21,1 -17,-2 -13,-2" fill="none" stroke="#ffffff" strokeWidth="2.5" />
-                    {/* Text */}
-                    <text
-                      x="2"
-                      y="3"
-                      textAnchor="middle"
-                      fill="#ffffff"
-                      fontFamily="Manrope, sans-serif"
-                      fontSize="20"
-                      fontWeight="800"
-                      letterSpacing="0.5"
-                    >
-                      Leads
-                    </text>
-                  </g>
+              {/* ===== RIGHT: 3D VIBRANT FUNNEL (Revenue Marketing - Photo 2) ===== */}
+              <div className="funnel-col col-revenue">
+                <div className="funnel-col-header">
+                  <span className="col-badge badge-revenue">REVENUE MARKETING</span>
+                </div>
 
-                  {/* ===== TIER 4: REVENUE (Deep Navy Rounded Cone Apex) ===== */}
-                  <path
-                    d="M 192,352 C 212,378 348,378 368,352 L 316,462 C 304,484 256,484 244,462 Z"
-                    fill="url(#tierApexGrad)"
-                  />
-                  {/* Tier 4 Top Shadow Lip */}
-                  <path
-                    d="M 192,352 C 212,378 348,378 368,352"
-                    fill="none"
-                    stroke="#020617"
-                    strokeWidth="3.5"
-                    opacity="0.45"
-                  />
-                  {/* Tier 4 Content: Bar Chart Icon + Text */}
-                  <g className="tier-content" transform="translate(280, 418)">
-                    {/* Bar Chart Icon */}
-                    <rect x="-18" y="-14" width="6" height="12" rx="1.5" fill="#ffffff" />
-                    <rect x="-9" y="-20" width="6" height="18" rx="1.5" fill="#ffffff" />
-                    <rect x="0" y="-26" width="6" height="24" rx="1.5" fill="#ffc300" />
-                    <path d="M -22,-18 L -3,-32 L 6,-23" fill="none" stroke="#ffc300" strokeWidth="2.5" strokeLinecap="round" />
-                    {/* Text */}
-                    <text
-                      x="0"
-                      y="18"
-                      textAnchor="middle"
-                      fill="#ffffff"
-                      fontFamily="Manrope, sans-serif"
-                      fontSize="19"
-                      fontWeight="800"
-                      letterSpacing="0.5"
-                    >
-                      Revenue
-                    </text>
-                  </g>
-                </g>
-              </svg>
+                <div className="funnel-svg-wrapper">
+                  <svg
+                    viewBox="0 0 460 480"
+                    className="funnel-single-svg"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <defs>
+                      <filter id="shadowBrand" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="16" stdDeviation="18" floodColor="#051c52" floodOpacity="0.22" />
+                      </filter>
 
-              {/* Hand-drawn Script Callout: "More than just clicks." */}
-              <div className="funnel-script-callout">
-                <svg className="curved-callout-arrow" viewBox="0 0 70 70">
-                  <path
-                    d="M 60,60 C 40,25 25,20 10,22"
-                    fill="none"
-                    stroke="#051c52"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <polygon points="12,14 4,22 14,28" fill="#051c52" />
-                </svg>
-                <div className="script-text-wrap">
-                  <span className="script-text">More than</span>
-                  <span className="script-text script-highlight">just clicks.</span>
-                  <div className="script-yellow-underline" />
+                      {/* Brand 3D Gradients */}
+                      <linearGradient id="tier1Navy" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#1e4ec8" />
+                        <stop offset="30%" stopColor="#0c328e" />
+                        <stop offset="70%" stopColor="#051c52" />
+                        <stop offset="100%" stopColor="#020e2b" />
+                      </linearGradient>
+
+                      <linearGradient id="tier2Yellow" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#fff099" />
+                        <stop offset="30%" stopColor="#ffc91a" />
+                        <stop offset="70%" stopColor="#ffc300" />
+                        <stop offset="100%" stopColor="#d49500" />
+                      </linearGradient>
+
+                      <linearGradient id="tier3Red" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#fb7185" />
+                        <stop offset="30%" stopColor="#ef4444" />
+                        <stop offset="70%" stopColor="#e34e4e" />
+                        <stop offset="100%" stopColor="#991b1b" />
+                      </linearGradient>
+
+                      <linearGradient id="tier4Apex" x1="0%" y1="0%" x2="100%" y2="80%">
+                        <stop offset="0%" stopColor="#1d4ed8" />
+                        <stop offset="40%" stopColor="#0c2f7d" />
+                        <stop offset="85%" stopColor="#051c52" />
+                        <stop offset="100%" stopColor="#020a1c" />
+                      </linearGradient>
+
+                      <radialGradient id="brandCavity" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stopColor="#010614" />
+                        <stop offset="75%" stopColor="#051538" />
+                        <stop offset="100%" stopColor="#0a2560" />
+                      </radialGradient>
+                    </defs>
+
+                    {/* 3D Funnel Body */}
+                    <g filter="url(#shadowBrand)">
+                      {/* Top Hollow Cavity Rim */}
+                      <ellipse cx="230" cy="55" rx="190" ry="40" fill="url(#brandCavity)" />
+                      <ellipse cx="230" cy="55" rx="190" ry="40" fill="none" stroke="#60a5fa" strokeWidth="2.5" opacity="0.4" />
+
+                      {/* ===== TIER 1: VISIBILITY (Deep Navy) ===== */}
+                      <path
+                        d="M 40,55 C 40,90 420,90 420,55 L 388,145 C 365,174 95,174 72,145 Z"
+                        fill="url(#tier1Navy)"
+                      />
+                      {/* Tier 1 Content: Eye Icon + Text */}
+                      <g transform="translate(230, 114)">
+                        <path
+                          d="M -44,-2 C -30,-14 -12,-20 0,-20 C 12,-20 30,-14 44,-2 C 30,10 12,16 0,16 C -12,16 -30,10 -44,-2 Z"
+                          fill="none"
+                          stroke="#ffffff"
+                          strokeWidth="2.8"
+                        />
+                        <circle cx="0" cy="-2" r="6.5" fill="#ffffff" />
+                        <text
+                          x="0"
+                          y="15"
+                          textAnchor="middle"
+                          fill="#ffffff"
+                          fontFamily="Manrope, sans-serif"
+                          fontSize="18"
+                          fontWeight="800"
+                        >
+                          Visibility
+                        </text>
+                      </g>
+
+                      {/* ===== TIER 2: TRAFFIC (School Bus Yellow) ===== */}
+                      <path
+                        d="M 70,143 C 95,174 365,174 390,143 L 352,240 C 330,268 130,268 108,240 Z"
+                        fill="url(#tier2Yellow)"
+                      />
+                      {/* Tier 2 Content: Cursor Arrow + Text */}
+                      <g transform="translate(230, 204)">
+                        <path
+                          d="M -42,-14 L -30,8 L -34,3 L -28,12 L -31,13 L -37,4 L -40,8 Z"
+                          fill="#051c52"
+                        />
+                        <text
+                          x="4"
+                          y="5"
+                          textAnchor="middle"
+                          fill="#051c52"
+                          fontFamily="Manrope, sans-serif"
+                          fontSize="18"
+                          fontWeight="800"
+                        >
+                          Traffic
+                        </text>
+                      </g>
+
+                      {/* ===== TIER 3: LEADS (Strawberry Red) ===== */}
+                      <path
+                        d="M 106,238 C 130,268 330,268 354,238 L 312,336 C 294,362 166,362 148,336 Z"
+                        fill="url(#tier3Red)"
+                      />
+                      {/* Tier 3 Content: People Icon + Text */}
+                      <g transform="translate(230, 298)">
+                        <circle cx="-35" cy="-8" r="4.5" fill="#ffffff" />
+                        <path d="M -43,4 C -43,0 -39,-2.5 -35,-2.5 C -31,-2.5 -27,0 -27,4" fill="#ffffff" />
+                        <circle cx="-23" cy="-8" r="3.5" fill="#ffffff" opacity="0.85" />
+                        <path d="M -20,4 C -20,1 -16,-1 -13,-1" fill="none" stroke="#ffffff" strokeWidth="2" />
+                        <text
+                          x="4"
+                          y="4"
+                          textAnchor="middle"
+                          fill="#ffffff"
+                          fontFamily="Manrope, sans-serif"
+                          fontSize="18"
+                          fontWeight="800"
+                        >
+                          Leads
+                        </text>
+                      </g>
+
+                      {/* ===== TIER 4: REVENUE (Deep Navy Apex) ===== */}
+                      <path
+                        d="M 146,334 C 166,362 294,362 314,334 L 265,446 C 252,468 208,468 195,446 Z"
+                        fill="url(#tier4Apex)"
+                      />
+                      {/* Tier 4 Content: Bar Chart + Text */}
+                      <g transform="translate(230, 396)">
+                        <rect x="-16" y="-12" width="5" height="10" rx="1" fill="#ffffff" />
+                        <rect x="-8" y="-18" width="5" height="16" rx="1" fill="#ffffff" />
+                        <rect x="0" y="-23" width="5" height="21" rx="1" fill="#ffc300" />
+                        <path d="M -19,-15 L -3,-28 L 5,-20" fill="none" stroke="#ffc300" strokeWidth="2" strokeLinecap="round" />
+                        <text
+                          x="0"
+                          y="16"
+                          textAnchor="middle"
+                          fill="#ffffff"
+                          fontFamily="Manrope, sans-serif"
+                          fontSize="17"
+                          fontWeight="800"
+                        >
+                          Revenue
+                        </text>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                {/* Clean Points Below Revenue Funnel */}
+                <div className="funnel-points-card points-revenue">
+                  <h4>The Connected Growth Engine</h4>
+                  <ul className="funnel-card-list">
+                    <li>
+                      <span className="bullet-check">✓</span>
+                      <strong>Full-Funnel Attribution:</strong> Every rupee of ad spend is tied to closed sales & customer LTV.
+                    </li>
+                    <li>
+                      <span className="bullet-check">✓</span>
+                      <strong>High-Intent Audience:</strong> Captures active buyers rather than casual window-shoppers.
+                    </li>
+                    <li>
+                      <span className="bullet-check">✓</span>
+                      <strong>Compounding Growth:</strong> Continuous multivariate testing turns marketing into a profit center.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
