@@ -450,104 +450,29 @@ export default function Services() {
                       <ellipse cx="230" cy="55" rx="190" ry="40" fill="url(#brandCavity)" />
                       <ellipse cx="230" cy="55" rx="190" ry="40" fill="none" stroke="#60a5fa" strokeWidth="2.5" opacity="0.4" />
 
-                      {/* ===== TIER 1: VISIBILITY (Deep Navy) ===== */}
+                      {/* ===== TIER 1: Deep Navy ===== */}
                       <path
                         d="M 40,55 C 40,90 420,90 420,55 L 388,145 C 365,174 95,174 72,145 Z"
                         fill="url(#tier1Navy)"
                       />
-                      {/* Tier 1 Content: Eye Icon + Text */}
-                      <g transform="translate(230, 114)">
-                        <path
-                          d="M -44,-2 C -30,-14 -12,-20 0,-20 C 12,-20 30,-14 44,-2 C 30,10 12,16 0,16 C -12,16 -30,10 -44,-2 Z"
-                          fill="none"
-                          stroke="#ffffff"
-                          strokeWidth="2.8"
-                        />
-                        <circle cx="0" cy="-2" r="6.5" fill="#ffffff" />
-                        <text
-                          x="0"
-                          y="15"
-                          textAnchor="middle"
-                          fill="#ffffff"
-                          fontFamily="Manrope, sans-serif"
-                          fontSize="18"
-                          fontWeight="800"
-                        >
-                          Visibility
-                        </text>
-                      </g>
 
-                      {/* ===== TIER 2: TRAFFIC (School Bus Yellow) ===== */}
+                      {/* ===== TIER 2: School Bus Yellow ===== */}
                       <path
                         d="M 70,143 C 95,174 365,174 390,143 L 352,240 C 330,268 130,268 108,240 Z"
                         fill="url(#tier2Yellow)"
                       />
-                      {/* Tier 2 Content: Cursor Arrow + Text */}
-                      <g transform="translate(230, 204)">
-                        <path
-                          d="M -42,-14 L -30,8 L -34,3 L -28,12 L -31,13 L -37,4 L -40,8 Z"
-                          fill="#051c52"
-                        />
-                        <text
-                          x="4"
-                          y="5"
-                          textAnchor="middle"
-                          fill="#051c52"
-                          fontFamily="Manrope, sans-serif"
-                          fontSize="18"
-                          fontWeight="800"
-                        >
-                          Traffic
-                        </text>
-                      </g>
 
-                      {/* ===== TIER 3: LEADS (Strawberry Red) ===== */}
+                      {/* ===== TIER 3: Strawberry Red ===== */}
                       <path
                         d="M 106,238 C 130,268 330,268 354,238 L 312,336 C 294,362 166,362 148,336 Z"
                         fill="url(#tier3Red)"
                       />
-                      {/* Tier 3 Content: People Icon + Text */}
-                      <g transform="translate(230, 298)">
-                        <circle cx="-35" cy="-8" r="4.5" fill="#ffffff" />
-                        <path d="M -43,4 C -43,0 -39,-2.5 -35,-2.5 C -31,-2.5 -27,0 -27,4" fill="#ffffff" />
-                        <circle cx="-23" cy="-8" r="3.5" fill="#ffffff" opacity="0.85" />
-                        <path d="M -20,4 C -20,1 -16,-1 -13,-1" fill="none" stroke="#ffffff" strokeWidth="2" />
-                        <text
-                          x="4"
-                          y="4"
-                          textAnchor="middle"
-                          fill="#ffffff"
-                          fontFamily="Manrope, sans-serif"
-                          fontSize="18"
-                          fontWeight="800"
-                        >
-                          Leads
-                        </text>
-                      </g>
 
-                      {/* ===== TIER 4: REVENUE (Deep Navy Apex) ===== */}
+                      {/* ===== TIER 4: Deep Navy Apex ===== */}
                       <path
                         d="M 146,334 C 166,362 294,362 314,334 L 265,446 C 252,468 208,468 195,446 Z"
                         fill="url(#tier4Apex)"
                       />
-                      {/* Tier 4 Content: Bar Chart + Text */}
-                      <g transform="translate(230, 396)">
-                        <rect x="-16" y="-12" width="5" height="10" rx="1" fill="#ffffff" />
-                        <rect x="-8" y="-18" width="5" height="16" rx="1" fill="#ffffff" />
-                        <rect x="0" y="-23" width="5" height="21" rx="1" fill="#ffc300" />
-                        <path d="M -19,-15 L -3,-28 L 5,-20" fill="none" stroke="#ffc300" strokeWidth="2" strokeLinecap="round" />
-                        <text
-                          x="0"
-                          y="16"
-                          textAnchor="middle"
-                          fill="#ffffff"
-                          fontFamily="Manrope, sans-serif"
-                          fontSize="17"
-                          fontWeight="800"
-                        >
-                          Revenue
-                        </text>
-                      </g>
                     </g>
                   </svg>
                 </div>

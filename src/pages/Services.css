@@ -354,13 +354,13 @@
   color: var(--navy-body);
 }
 
-/* Funnel Comparison Stage Container */
+/* Funnel Comparison Stage Container (Open, seamless layout without bounding rectangle box) */
 .funnel-comparison-stage {
-  background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f6f8fd 100%);
-  border: 2px solid var(--card-border);
-  border-radius: 32px;
-  padding: 60px 45px 55px;
-  box-shadow: 0 20px 55px rgba(5, 28, 82, 0.08);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0 0;
+  box-shadow: none;
   margin-bottom: 70px;
 }
 
@@ -382,36 +382,37 @@
 }
 
 .funnel-col-header {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .col-badge {
   font-family: "Manrope", sans-serif;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 2.5px;
-  padding: 9px 24px;
-  border-radius: 30px;
+  padding: 8px 24px;
+  border-radius: 999px;
   display: inline-block;
+  border: none;
 }
 
 .badge-traditional {
-  background: #e2e8f0;
-  color: #475569;
-  border: 1.5px solid #cbd5e1;
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
 }
 
 .badge-revenue {
-  background: #fff8e1;
+  background: rgba(5, 28, 82, 0.08);
   color: var(--navy);
-  border: 2px solid rgba(255, 195, 0, 0.6);
-  box-shadow: 0 4px 14px rgba(255, 195, 0, 0.25);
+  border: none;
+  box-shadow: none;
 }
 
 /* SVG Funnel Wrapper */
 .funnel-svg-wrapper {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   margin: 0 auto 35px;
 }
 
@@ -424,21 +425,23 @@
 /* Cards below each 3D Funnel */
 .funnel-points-card {
   width: 100%;
-  background: var(--white);
+  background: #f8fafc;
   border-radius: 20px;
   padding: 34px 28px;
   text-align: left;
-  border: 2px solid var(--card-border);
-  box-shadow: 0 8px 24px rgba(5, 28, 82, 0.04);
+  border: 1px solid rgba(5, 28, 82, 0.06);
+  box-shadow: none;
 }
 
 .points-traditional {
-  border-color: #e2e8f0;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
 }
 
 .points-revenue {
-  border-color: var(--navy);
-  box-shadow: 0 10px 30px rgba(5, 28, 82, 0.08);
+  background: #fbfcfe;
+  border-left: 4px solid var(--navy);
+  box-shadow: none;
 }
 
 .funnel-points-card h4 {
