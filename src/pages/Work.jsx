@@ -234,12 +234,12 @@ const caseStudies = [
 ];
 
 const categories = [
-  { id: "all", label: "All Projects" },
-  { id: "performance", label: "Performance Marketing" },
-  { id: "seo", label: "SEO & Organic" },
-  { id: "growth", label: "Growth Marketing" },
-  { id: "social", label: "Social Media & Content" },
-  { id: "cro", label: "Website & CRO" },
+  { id: "all", label: "All Projects", icon: "✦", count: 6 },
+  { id: "performance", label: "Performance Ads", icon: "⚡", count: 2 },
+  { id: "seo", label: "SEO & Search", icon: "⌕", count: 1 },
+  { id: "growth", label: "Growth Strategy", icon: "↗", count: 1 },
+  { id: "social", label: "Social Media", icon: "◎", count: 1 },
+  { id: "cro", label: "Website CRO", icon: "</>", count: 1 },
 ];
 
 export default function Work() {
@@ -341,29 +341,52 @@ export default function Work() {
       {/* ===== PORTFOLIO & CASE STUDIES: CLEAN 2-COLUMN SPACIOUS GRID ===== */}
       <section id="portfolio-section" className="work-portfolio-section">
         <div className="work-portfolio-wrap">
-          {/* Section Header */}
-          <div className="portfolio-section-header">
-            <span className="work-eyebrow-tag">CURATED PROVEN WORK</span>
-            <h2>
-              Real Brands. <span>Real Numbers.</span>
-            </h2>
-            <p>
-              Browse our documented case studies across D2C e-commerce, luxury hospitality, B2B technology, and lifestyle brands.
-            </p>
-          </div>
+          {/* Section Header & Reimagined Filter Hub */}
+          <div className="portfolio-intro-block">
+            <div className="portfolio-intro-text">
+              <span className="work-eyebrow-tag">VERIFIED CLIENT PORTFOLIO</span>
+              <h2 className="portfolio-main-heading">
+                Proven Work Across <span>6 Marketing Engines.</span>
+              </h2>
+              <p className="portfolio-main-desc">
+                Select a marketing channel below to inspect verified client ROAS, organic growth, and conversion funnels.
+              </p>
+            </div>
 
-          {/* Filter Bar */}
-          <div className="work-filter-bar">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                className={`filter-tab ${activeFilter === cat.id ? "tab-active" : ""}`}
-                onClick={() => setActiveFilter(cat.id)}
-              >
-                {cat.label}
-              </button>
-            ))}
+            {/* Unified Floating Filter Capsule Dock */}
+            <div className="filter-dock-wrapper">
+              <div className="filter-dock-pill">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className={`dock-filter-btn ${activeFilter === cat.id ? "dock-filter-active" : ""}`}
+                    onClick={() => setActiveFilter(cat.id)}
+                  >
+                    <span className="dock-icon">{cat.icon}</span>
+                    <span className="dock-label">{cat.label}</span>
+                    <span className="dock-counter">{cat.count}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Dynamic Results Counter Pill */}
+            <div className="filter-status-pill">
+              <span className="status-live-dot" />
+              <span className="status-text">
+                Showing <strong>{filteredStudies.length}</strong> of <strong>6</strong> documented case studies
+              </span>
+              {activeFilter !== "all" && (
+                <button
+                  type="button"
+                  className="status-reset-btn"
+                  onClick={() => setActiveFilter("all")}
+                >
+                  (View All ✕)
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Clean 2-Column Spacious Grid */}
