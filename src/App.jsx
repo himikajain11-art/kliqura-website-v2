@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -365,9 +365,76 @@ function Chatbot() {
   );
 }
 
+function SEOHandler() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const seoData = {
+      "/": {
+        title: "Kliqura | Performance Marketing & Digital Growth Agency in Udaipur",
+        description: "Kliqura is Udaipur's premier digital marketing agency. We scale brands with high-ROAS Meta & Google Ads, SEO search dominance, and full-funnel growth strategies.",
+        canonical: "https://kliqura.com/",
+      },
+      "/services": {
+        title: "Digital Marketing Services | Meta & Google Ads, SEO | Kliqura",
+        description: "Explore Kliqura's data-driven growth services: Performance Marketing, SEO search dominance, content marketing, and conversion rate optimization (CRO) in Udaipur.",
+        canonical: "https://kliqura.com/services",
+      },
+      "/work": {
+        title: "Case Studies & Growth Results | Scaled ROAS & Traffic | Kliqura",
+        description: "See real revenue case studies and ROAS growth delivered by Kliqura for brands across e-commerce, real estate, and B2B services.",
+        canonical: "https://kliqura.com/work",
+      },
+      "/about": {
+        title: "About Kliqura | Data-Driven Digital Growth Agency in Udaipur",
+        description: "Learn about Kliqura's team of senior growth strategists, our performance-first methodology, and our headquarters in Udaipur, Rajasthan.",
+        canonical: "https://kliqura.com/about",
+      },
+      "/about-us": {
+        title: "About Kliqura | Data-Driven Digital Growth Agency in Udaipur",
+        description: "Learn about Kliqura's team of senior growth strategists, our performance-first methodology, and our headquarters in Udaipur, Rajasthan.",
+        canonical: "https://kliqura.com/about",
+      },
+      "/blog": {
+        title: "Growth Insights & Marketing Playbooks | Kliqura Blog",
+        description: "Actionable digital marketing strategies, Meta Ads scaling guides, SEO tactics, and conversion optimization playbooks by Kliqura's strategists.",
+        canonical: "https://kliqura.com/blog",
+      },
+      "/contact": {
+        title: "Contact Kliqura | Book Free 30-Min Marketing Audit",
+        description: "Get in touch with Kliqura's senior growth strategists in Udaipur. Request your free 30-minute growth teardown and scale your brand's digital revenue.",
+        canonical: "https://kliqura.com/contact",
+      },
+      "/contact-us": {
+        title: "Contact Kliqura | Book Free 30-Min Marketing Audit",
+        description: "Get in touch with Kliqura's senior growth strategists in Udaipur. Request your free 30-minute growth teardown and scale your brand's digital revenue.",
+        canonical: "https://kliqura.com/contact",
+      },
+    };
+
+    const currentMeta = seoData[location.pathname] || seoData["/"];
+    document.title = currentMeta.title;
+
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", currentMeta.description);
+    }
+
+    // Update Canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute("href", currentMeta.canonical);
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
+      <SEOHandler />
       <Header />
 
       <Routes>

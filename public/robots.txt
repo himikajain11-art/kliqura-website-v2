@@ -1,0 +1,9 @@
+# KLIQURA Official Robots.txt
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kliqura.com
+
+# XML Sitemap Pointer for Googlebot, Bingbot, and Search Crawlers
+Sitemap: https://kliqura.com/sitemap.xml

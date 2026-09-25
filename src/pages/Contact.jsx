@@ -127,8 +127,8 @@ export default function Contact() {
             </div>
 
             <h1 className="contact-hero-title">
-              Let’s Build Something That
-              <span className="contact-title-gradient"> Scales Your Revenue.</span>
+              Let’s Build Something
+              <span className="contact-title-gradient"> That Scales Your Revenue.</span>
             </h1>
 
             <p className="contact-hero-subtitle">

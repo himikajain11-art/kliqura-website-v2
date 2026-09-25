@@ -123,6 +123,7 @@
   line-height: 1.14;
   letter-spacing: -1.2px;
   margin: 0 0 22px;
+  text-wrap: balance;
 }
 
 .contact-title-gradient {
