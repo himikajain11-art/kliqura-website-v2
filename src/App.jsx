@@ -373,42 +373,42 @@ function SEOHandler() {
       "/": {
         title: "Kliqura | Performance Marketing & Digital Growth Agency in Udaipur",
         description: "Kliqura is Udaipur's premier digital marketing agency. We scale brands with high-ROAS Meta & Google Ads, SEO search dominance, and full-funnel growth strategies.",
-        canonical: "https://kliqura.com/",
+        canonical: "https://www.kliqura.com/",
       },
       "/services": {
         title: "Digital Marketing Services | Meta & Google Ads, SEO | Kliqura",
         description: "Explore Kliqura's data-driven growth services: Performance Marketing, SEO search dominance, content marketing, and conversion rate optimization (CRO) in Udaipur.",
-        canonical: "https://kliqura.com/services",
+        canonical: "https://www.kliqura.com/services",
       },
       "/work": {
         title: "Case Studies & Growth Results | Scaled ROAS & Traffic | Kliqura",
         description: "See real revenue case studies and ROAS growth delivered by Kliqura for brands across e-commerce, real estate, and B2B services.",
-        canonical: "https://kliqura.com/work",
+        canonical: "https://www.kliqura.com/work",
       },
       "/about": {
         title: "About Kliqura | Data-Driven Digital Growth Agency in Udaipur",
         description: "Learn about Kliqura's team of senior growth strategists, our performance-first methodology, and our headquarters in Udaipur, Rajasthan.",
-        canonical: "https://kliqura.com/about",
+        canonical: "https://www.kliqura.com/about",
       },
       "/about-us": {
         title: "About Kliqura | Data-Driven Digital Growth Agency in Udaipur",
         description: "Learn about Kliqura's team of senior growth strategists, our performance-first methodology, and our headquarters in Udaipur, Rajasthan.",
-        canonical: "https://kliqura.com/about",
+        canonical: "https://www.kliqura.com/about",
       },
       "/blog": {
         title: "Growth Insights & Marketing Playbooks | Kliqura Blog",
         description: "Actionable digital marketing strategies, Meta Ads scaling guides, SEO tactics, and conversion optimization playbooks by Kliqura's strategists.",
-        canonical: "https://kliqura.com/blog",
+        canonical: "https://www.kliqura.com/blog",
       },
       "/contact": {
         title: "Contact Kliqura | Book Free 30-Min Marketing Audit",
         description: "Get in touch with Kliqura's senior growth strategists in Udaipur. Request your free 30-minute growth teardown and scale your brand's digital revenue.",
-        canonical: "https://kliqura.com/contact",
+        canonical: "https://www.kliqura.com/contact",
       },
       "/contact-us": {
         title: "Contact Kliqura | Book Free 30-Min Marketing Audit",
         description: "Get in touch with Kliqura's senior growth strategists in Udaipur. Request your free 30-minute growth teardown and scale your brand's digital revenue.",
-        canonical: "https://kliqura.com/contact",
+        canonical: "https://www.kliqura.com/contact",
       },
     };
 

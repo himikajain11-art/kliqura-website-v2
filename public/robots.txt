@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kliqura.com
+Host: https://www.kliqura.com
 
 # XML Sitemap Pointer for Googlebot, Bingbot, and Search Crawlers
-Sitemap: https://kliqura.com/sitemap.xml
+Sitemap: https://www.kliqura.com/sitemap.xml
