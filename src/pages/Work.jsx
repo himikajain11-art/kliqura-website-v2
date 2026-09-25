@@ -8,25 +8,26 @@ const caseStudies = [
     category: "performance",
     categoryLabel: "Performance Marketing",
     client: "Aura Threaded",
-    industry: "Premium D2C Fashion & Apparel",
-    title: "Scaling Monthly D2C Revenue from ₹14 Lakhs to ₹92 Lakhs in 6 Months",
+    industry: "Premium D2C Apparel",
+    title: "Scaling Monthly D2C Revenue from ₹14L to ₹92L in 6 Months",
     heroMetric: "5.4×",
-    heroMetricLabel: "Blended ROAS Across Meta & Google",
+    heroMetricLabel: "Blended Return on Ad Spend (ROAS)",
     color: "red",
-    badges: [
-      { value: "+557%", label: "Revenue Scale" },
-      { value: "-38%", label: "Customer Acquisition Cost" },
-      { value: "₹1.8 Cr+", label: "Total GMV Delivered" },
+    tags: ["Meta Ads (ASC)", "Google PMax", "UGC Creative", "Retention Flows"],
+    resultsList: [
+      "+557% Total Revenue Scaled",
+      "-38% Customer Acquisition Cost (CAC)",
+      "₹1.8 Cr+ Total GMV Generated",
     ],
     summary:
-      "Aura Threaded had hit an ad-spend plateau with stagnant ROAS below 1.8×. KLIQURA restructured their entire paid media engine with dynamic creative testing (DCT) and high-converting UGC hooks.",
+      "Aura Threaded had hit an ad-spend plateau with stagnant ROAS below 1.8×. KLIQURA rebuilt their paid media engine with dynamic creative testing (DCT), high-converting UGC video hooks, and automated WhatsApp cart recovery.",
     challenge:
-      "High ad fatigue, rising Meta CPMS, and a leaky Shopify checkout funnel where 72% of carts were abandoned without converting.",
+      "High ad creative fatigue, rising Meta CPMs, and a leaky mobile checkout where 72% of carts were abandoned without completing payment.",
     strategy: [
-      "Built an aggressive creative sprint pipeline delivering 35+ fresh UGC hooks and problem-solution video ads every month.",
-      "Restructured ad account into Advantage+ Shopping Campaigns (ASC) and high-intent Google Performance Max campaigns.",
-      "Engineered automated WhatsApp and SMS abandoned checkout sequences that recovered 34% of dropped carts.",
-      "Optimized product landing pages for mobile speed and 1-tap UPI checkout, lifting conversion rate from 1.6% to 3.8%.",
+      "Engineered an aggressive creative sprint delivering 35+ fresh UGC hooks and problem-solution video ads every month.",
+      "Restructured ad account into Advantage+ Shopping Campaigns (ASC) and high-intent Google Search/PMax campaigns.",
+      "Built automated WhatsApp & SMS checkout recovery sequences that reclaimed 34% of dropped carts within 2 hours.",
+      "Streamlined Shopify checkout UX for mobile speed and 1-tap UPI, lifting overall conversion rate from 1.6% to 3.8%.",
     ],
     results: [
       "Scaled monthly revenue from ₹14 Lakhs to ₹92 Lakhs within 180 days.",
@@ -46,23 +47,24 @@ const caseStudies = [
     categoryLabel: "SEO & Organic Growth",
     client: "The Royal Haveli",
     industry: "Luxury Heritage Resort • Udaipur",
-    title: "Dominating High-Intent Google Search & Eliminating High OTA Commissions",
+    title: "Dominating Google Search & Eliminating High OTA Commissions",
     heroMetric: "+340%",
     heroMetricLabel: "Organic Direct Inbound Bookings",
     color: "yellow",
-    badges: [
-      { value: "#1 Rank", label: "For 48+ Commercial Keywords" },
-      { value: "₹64 Lakhs", label: "Direct Booking Revenue" },
-      { value: "0% OTA Fee", label: "On Direct Search Traffic" },
+    tags: ["Technical SEO", "Local Google Business", "Content Clusters", "UX Speed"],
+    resultsList: [
+      "#1 Google Rank for 48+ Keywords",
+      "₹64 Lakhs Direct Booking Revenue",
+      "Zero Third-Party Commission Fees",
     ],
     summary:
-      "The resort relied heavily on booking portals (OTAs), losing 18–22% per reservation in commissions. KLIQURA deployed full-stack technical and local SEO to turn organic search into their #1 booking channel.",
+      "The resort relied heavily on booking portals (OTAs), losing 18–22% per reservation in fees. KLIQURA deployed technical and local SEO to make their website the #1 choice for direct destination wedding and holiday bookings.",
     challenge:
-      "Zero page-1 rankings for high-intent queries like 'luxury heritage resort in Udaipur' and destination wedding inquiries. Slow website loading times (5.4s) caused high bounce rates.",
+      "Zero page-1 rankings for competitive commercial queries like 'luxury heritage resort in Udaipur' and destination wedding inquiries. High bounce rate due to slow mobile loading.",
     strategy: [
-      "Technical Core Web Vitals overhaul: boosted Google mobile page speed score from 38 to 96.",
+      "Technical Core Web Vitals overhaul: boosted Google mobile speed score from 38 to 96.",
       "Targeted high-value commercial keywords: 'heritage destination wedding resort Udaipur' and 'luxury lakeview suites'.",
-      "Full Google Business Profile optimization with hyper-local geo-tagging, 5-star review acquisition workflows, and high-res photo tours.",
+      "Full Google Business Profile optimization with hyper-local geo-tagging and 5-star review acquisition workflows.",
       "Created comprehensive Udaipur wedding & holiday itinerary guides that established authoritative backlinks from travel publications.",
     ],
     results: [
@@ -72,7 +74,7 @@ const caseStudies = [
     ],
     testimonial: {
       quote:
-        "We saved lakhs in portal commissions within months. KLIQURA made our resort the first thing luxury travelers see when searching for Udaipur.",
+        "We saved lakhs in portal commissions within months. KLIQURA made our resort the first organic search result luxury travelers see when searching for Udaipur.",
       author: "Vikramaditya S.",
       role: "Managing Director, The Royal Haveli",
     },
@@ -82,18 +84,19 @@ const caseStudies = [
     category: "growth",
     categoryLabel: "Growth Marketing",
     client: "CloudPulse CRM",
-    industry: "B2B Enterprise Software & Tech",
+    industry: "B2B Enterprise Software",
     title: "Building an Automated Inbound Pipeline for Enterprise Deal Closures",
     heroMetric: "320+",
-    heroMetricLabel: "Enterprise Sales Qualified Leads (SQLs)",
+    heroMetricLabel: "Sales Qualified Enterprise Leads (SQLs)",
     color: "navy",
-    badges: [
-      { value: "4.2×", label: "Pipeline Value Surge" },
-      { value: "-45%", label: "Cost Per Lead (CPL)" },
-      { value: "₹3.2 Cr", label: "Closed Annual Deal Value" },
+    tags: ["LinkedIn ABM Ads", "Competitor Search Ads", "CRO Landing Page", "Email Drip"],
+    resultsList: [
+      "4.2× Qualified Pipeline Surge",
+      "-45% Cost Per Qualified Lead",
+      "₹3.2 Cr Closed Deal Value",
     ],
     summary:
-      "CloudPulse had a revolutionary product but was burning capital on cold outreach with single-digit response rates. KLIQURA engineered an inbound growth engine targeting decision-makers on LinkedIn & Google Search.",
+      "CloudPulse had a revolutionary product but was burning capital on cold outreach with single-digit response rates. KLIQURA engineered an inbound growth engine targeting decision-makers on LinkedIn and high-intent Google Search.",
     challenge:
       "Lengthy 90-day sales cycles, low awareness among enterprise CTOs, and generic ad messaging that attracted non-decision makers.",
     strategy: [
@@ -119,18 +122,19 @@ const caseStudies = [
     category: "social",
     categoryLabel: "Social Media & Content",
     client: "Brew & Bean Roastery",
-    industry: "Specialty F&B & Lifestyle Cafe Chain",
-    title: "From Local Cafe to Viral Sensation: Driving Record Footfalls with Short-Form Video",
+    industry: "Specialty Cafe & Lifestyle Brand",
+    title: "Driving Record Store Footfall with Viral Short-Form Video Strategy",
     heroMetric: "6.8M+",
-    heroMetricLabel: "Organic Reel Views in 90 Days",
+    heroMetricLabel: "Organic Instagram Reel Views",
     color: "red",
-    badges: [
-      { value: "+140K", label: "Engaged Followers" },
-      { value: "+210%", label: "Weekend Store Footfall" },
-      { value: "18 Reels", label: "Surpassed 250K+ Views" },
+    tags: ["Cinematic Reels", "Creator Seeding", "Secret Menus", "Community Growth"],
+    resultsList: [
+      "+140K Engaged Followers",
+      "+210% Weekend Store Footfall",
+      "18 Viral Reels >250K Views",
     ],
     summary:
-      "Brew & Bean was opening two new branches and needed instant local awareness without burning massive budgets on traditional print or hoarding ads. KLIQURA turned their Instagram account into an engaging cultural hub.",
+      "Brew & Bean was opening two new outlets and needed instant local awareness without burning money on traditional print or hoarding ads. KLIQURA turned their Instagram account into an engaging lifestyle cultural hub.",
     challenge:
       "Intense local competition from established cafe chains, low social engagement (under 100 likes per post), and flat weekday footfalls.",
     strategy: [
@@ -156,18 +160,19 @@ const caseStudies = [
     category: "cro",
     categoryLabel: "Website & CRO Funnels",
     client: "Lumina Aesthetics",
-    industry: "High-Ticket Dermatology & Wellness",
-    title: "Doubling High-Ticket Consultation Bookings with a Frictionless Mobile Funnel",
+    industry: "High-Ticket Medical Dermatology",
+    title: "Doubling High-Ticket Consultation Bookings via Frictionless Mobile Funnel",
     heroMetric: "+142%",
     heroMetricLabel: "Increase in Booked Consultations",
     color: "yellow",
-    badges: [
-      { value: "1.2s", label: "Mobile Page Load Speed" },
-      { value: "+68%", label: "Mobile Conversion Rate" },
-      { value: "3.9×", label: "Marketing Return on Spend" },
+    tags: ["Mobile Funnel CRO", "1-Tap WhatsApp", "Video Proof", "Speed Optimization"],
+    resultsList: [
+      "1.2s Mobile Page Speed",
+      "+68% Mobile Conversion Rate",
+      "3.9× Return on Marketing Spend",
     ],
     summary:
-      "Lumina was running paid ads to a slow, desktop-centric website. Mobile visitors were bouncing before reaching the inquiry form. KLIQURA engineered a lightning-fast mobile-first conversion funnel.",
+      "Lumina was running paid ads to a slow, desktop-centric website. Mobile visitors bounced before reaching the contact form. KLIQURA engineered a lightning-fast mobile-first conversion funnel with 1-tap WhatsApp booking.",
     challenge:
       "Average high-ticket treatment cost was ₹25,000+, but the website failed to communicate medical credibility, doctor credentials, or clear before-after proof.",
     strategy: [
@@ -193,15 +198,16 @@ const caseStudies = [
     category: "performance",
     categoryLabel: "Performance Marketing",
     client: "VedaPure Organics",
-    industry: "Ayurvedic Health & Wellness D2C",
-    title: "Cracking Profitable Unit Economics with Retention Loops & Bundle Offers",
+    industry: "Health & Wellness D2C",
+    title: "Solving Unit Economics with High-Converting Bundles & Retention Loops",
     heroMetric: "4.9×",
     heroMetricLabel: "Blended ROAS with 38% Repeat Rate",
     color: "navy",
-    badges: [
-      { value: "₹1.4 Cr", label: "Quarterly Revenue" },
-      { value: "+48%", label: "Average Order Value (AOV)" },
-      { value: "22,000+", label: "New Buyers Acquired" },
+    tags: ["Bundle Offer Engine", "Advantage+ Scaling", "SMS Flows", "AOV Optimization"],
+    resultsList: [
+      "₹1.4 Cr Quarterly Revenue",
+      "+48% Average Order Value (AOV)",
+      "22,000+ New Buyers Acquired",
     ],
     summary:
       "High shipping costs and single-item orders were squeezing margins. KLIQURA restructured the product catalog into high-converting wellness bundles and launched aggressive paid acquisition loops.",
@@ -228,7 +234,7 @@ const caseStudies = [
 ];
 
 const categories = [
-  { id: "all", label: "All Case Studies" },
+  { id: "all", label: "All Projects" },
   { id: "performance", label: "Performance Marketing" },
   { id: "seo", label: "SEO & Organic" },
   { id: "growth", label: "Growth Marketing" },
@@ -247,7 +253,7 @@ export default function Work() {
 
   const handleSmoothScroll = (e) => {
     e.preventDefault();
-    const el = document.getElementById("case-studies-grid");
+    const el = document.getElementById("portfolio-section");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -259,80 +265,90 @@ export default function Work() {
 
   return (
     <main className="work-page">
-      {/* ===== HERO SECTION (NO CHEESY AI IMAGES - PURE DIGITAL AGENCY EXCELLENCE) ===== */}
+      {/* ===== HERO SECTION: DISTINCTIVE, CLEAN 2-COLUMN MARKETING SHOWCASE ===== */}
       <section className="work-hero-clean">
-        <div className="work-hero-ambient" />
-        <div className="work-hero-container">
-          <div className="work-hero-badge-wrap">
-            <span className="work-badge-pill">
-              <span className="badge-pulse" />
-              CLIENT CASE STUDIES • PROVEN REVENUE RESULTS
-            </span>
+        <div className="work-hero-wrap">
+          {/* Left Column: Bold Editorial Positioning */}
+          <div className="work-hero-content">
+            <span className="work-eyebrow-tag">PORTFOLIO • CASE STUDIES</span>
+
+            <h1 className="work-hero-headline">
+              Marketing Engineered For <span>Predictable Revenue.</span>
+            </h1>
+
+            <p className="work-hero-description">
+              We don’t celebrate vanity metrics like impressions and empty clicks.
+              Every project in our portfolio is engineered to drive tangible return on ad spend (ROAS),
+              high-intent inbound leads, and compounding bottom-line growth.
+            </p>
+
+            <div className="work-hero-cta-group">
+              <a
+                href="#portfolio-section"
+                onClick={handleSmoothScroll}
+                className="btn-work-explore"
+              >
+                Explore Case Studies ↓
+              </a>
+              <Link
+                to="/contact"
+                onClick={handleLinkClick}
+                className="btn-work-audit"
+              >
+                Claim Free Growth Audit ↗
+              </Link>
+            </div>
           </div>
 
-          <h1 className="work-hero-title">
-            Real Growth. Proven ROAS.
-            <span className="work-title-gradient"> Work That Drives Bottom-Line Revenue.</span>
-          </h1>
+          {/* Right Column: Distinctive Live Agency Performance Card */}
+          <div className="work-hero-visual">
+            <div className="perf-summary-card">
+              <div className="perf-card-header">
+                <div className="perf-status-indicator">
+                  <span className="perf-dot" />
+                  <span className="perf-status-text">AGGREGATE PORTFOLIO METRICS</span>
+                </div>
+                <span className="perf-period-tag">Verified ROI</span>
+              </div>
 
-          <p className="work-hero-subtitle">
-            We don’t celebrate vanity metrics like impressions and empty clicks. At KLIQURA,
-            our portfolio reflects bankable business growth—scaling Meta & Google Ads, dominating
-            organic Google rankings, and architecting frictionless conversion funnels for ambitious brands.
-          </p>
+              <div className="perf-main-kpi">
+                <span className="perf-kpi-sub">Total Client Revenue Delivered</span>
+                <div className="perf-kpi-val">₹18.4 Cr+</div>
+                <span className="perf-kpi-growth">↗ +312% YoY Average Client Scaling</span>
+              </div>
 
-          <div className="work-hero-actions">
-            <Link
-              to="/contact"
-              onClick={handleLinkClick}
-              className="work-btn-primary"
-            >
-              Get Your Free Growth Audit <span className="btn-arrow">↗</span>
-            </Link>
-            <a
-              href="#case-studies-grid"
-              onClick={handleSmoothScroll}
-              className="work-btn-secondary"
-            >
-              Explore Case Studies ↓
-            </a>
-          </div>
+              <div className="perf-divider-line" />
 
-          {/* ===== LIVE AGENCY IMPACT STATS STRIP ===== */}
-          <div className="work-stats-strip">
-            <div className="work-stat-box">
-              <strong>₹18.4 Cr+</strong>
-              <span>Client Revenue Delivered</span>
-            </div>
-            <div className="work-stat-sep" />
-            <div className="work-stat-box">
-              <strong>4.8×</strong>
-              <span>Average Blended ROAS</span>
-            </div>
-            <div className="work-stat-sep" />
-            <div className="work-stat-box">
-              <strong>450K+</strong>
-              <span>High-Intent Inquiries & Leads</span>
-            </div>
-            <div className="work-stat-sep" />
-            <div className="work-stat-box">
-              <strong>96.4%</strong>
-              <span>Client Retention Rate</span>
+              <div className="perf-stats-trio">
+                <div className="perf-mini-stat">
+                  <strong>4.8×</strong>
+                  <span>Avg Blended ROAS</span>
+                </div>
+                <div className="perf-mini-stat">
+                  <strong>450K+</strong>
+                  <span>High-Intent Leads</span>
+                </div>
+                <div className="perf-mini-stat">
+                  <strong>96.4%</strong>
+                  <span>Client Retention</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== PORTFOLIO & CASE STUDIES SHOWCASE ===== */}
-      <section id="case-studies-grid" className="work-portfolio-section">
-        <div className="work-portfolio-container">
-          <div className="work-section-header">
-            <p className="work-eyebrow">CURATED CLIENT RESULTS</p>
+      {/* ===== PORTFOLIO & CASE STUDIES: CLEAN 2-COLUMN SPACIOUS GRID ===== */}
+      <section id="portfolio-section" className="work-portfolio-section">
+        <div className="work-portfolio-wrap">
+          {/* Section Header */}
+          <div className="portfolio-section-header">
+            <span className="work-eyebrow-tag">CURATED PROVEN WORK</span>
             <h2>
-              Engineered For <span>Measurable Impact</span>
+              Real Brands. <span>Real Numbers.</span>
             </h2>
-            <p className="work-section-desc">
-              Explore how we solve tough acquisition challenges across D2C, B2B, hospitality, and local businesses.
+            <p>
+              Browse our documented case studies across D2C e-commerce, luxury hospitality, B2B technology, and lifestyle brands.
             </p>
           </div>
 
@@ -342,7 +358,7 @@ export default function Work() {
               <button
                 key={cat.id}
                 type="button"
-                className={`work-filter-btn ${activeFilter === cat.id ? "filter-active" : ""}`}
+                className={`filter-tab ${activeFilter === cat.id ? "tab-active" : ""}`}
                 onClick={() => setActiveFilter(cat.id)}
               >
                 {cat.label}
@@ -350,48 +366,61 @@ export default function Work() {
             ))}
           </div>
 
-          {/* Case Studies Grid */}
-          <div className="work-cards-grid">
+          {/* Clean 2-Column Spacious Grid */}
+          <div className="case-studies-grid">
             {filteredStudies.map((study) => (
               <article
                 key={study.id}
-                className={`case-study-card theme-${study.color}`}
+                className={`study-card study-card-${study.color}`}
               >
-                <div className="study-card-top">
-                  <div className="study-category-badge">{study.categoryLabel}</div>
-                  <span className="study-client-tag">{study.industry}</span>
+                {/* Card Top: Client & Service Category */}
+                <div className="study-card-top-row">
+                  <span className="study-client-name">{study.client}</span>
+                  <span className="study-category-pill">{study.categoryLabel}</span>
                 </div>
 
-                <div className="study-hero-metric-box">
-                  <div className="metric-number-wrap">
-                    <strong className="metric-number">{study.heroMetric}</strong>
-                    <span className="metric-trend">↗</span>
-                  </div>
-                  <span className="metric-caption">{study.heroMetricLabel}</span>
+                {/* Prominent Hero Metric */}
+                <div className="study-metric-highlight">
+                  <div className="metric-large-number">{study.heroMetric}</div>
+                  <div className="metric-large-label">{study.heroMetricLabel}</div>
                 </div>
 
-                <h3 className="study-title">{study.title}</h3>
+                {/* Outcome Headline */}
+                <h3 className="study-headline">{study.title}</h3>
 
-                <p className="study-summary">{study.summary}</p>
+                {/* Plain 2-sentence summary with relaxed spacing */}
+                <p className="study-description">{study.summary}</p>
 
-                {/* 3 Result Pills */}
-                <div className="study-badges-grid">
-                  {study.badges.map((b, idx) => (
-                    <div className="study-badge-pill" key={idx}>
-                      <strong>{b.value}</strong>
-                      <span>{b.label}</span>
-                    </div>
+                {/* 3 Concrete Results Bulleted with Clean Ticks */}
+                <div className="study-results-block">
+                  <span className="results-block-title">Key Measurable Outcomes:</span>
+                  <ul className="results-list">
+                    {study.resultsList.map((res, idx) => (
+                      <li key={idx}>
+                        <span className="tick-mark">✓</span>
+                        <span>{res}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Service Tags */}
+                <div className="study-tags-row">
+                  {study.tags.map((tag, idx) => (
+                    <span className="study-tag-item" key={idx}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
 
-                {/* Card Action */}
-                <div className="study-card-footer">
+                {/* Card Footer: Action Button */}
+                <div className="study-card-action-row">
                   <button
                     type="button"
-                    className="study-modal-btn"
+                    className="btn-view-strategy"
                     onClick={() => setActiveModal(study)}
                   >
-                    View Full Strategy & Data <span className="btn-arrow">→</span>
+                    View Full Strategy & Data <span className="arrow-icon">→</span>
                   </button>
                 </div>
               </article>
@@ -400,95 +429,92 @@ export default function Work() {
         </div>
       </section>
 
-      {/* ===== THE KLIQURA 4-STEP GROWTH BLUEPRINT ===== */}
+      {/* ===== THE 4-STAGE EXECUTION BLUEPRINT ===== */}
       <section className="work-blueprint-section">
-        <div className="blueprint-container">
-          <div className="blueprint-header">
-            <p className="work-eyebrow">HOW WE GUARANTEE RESULTS</p>
+        <div className="blueprint-wrap">
+          <div className="blueprint-header-centered">
+            <span className="work-eyebrow-tag">OUR METHODOLOGY</span>
             <h2>
               The KLIQURA <span>Execution Framework</span>
             </h2>
             <p>
-              Predictable growth isn&apos;t an accident. It is the result of continuous data audits, rapid creative testing, and ruthless budget allocation.
+              Predictable scaling is an engineering discipline. Every client follows our rigorous 4-stage optimization cycle.
             </p>
           </div>
 
-          <div className="blueprint-steps-grid">
-            <div className="blueprint-step-card">
-              <span className="step-counter">01</span>
+          <div className="blueprint-grid">
+            <div className="blueprint-card">
+              <span className="blueprint-num">01</span>
               <h4>Deep Forensic Audit</h4>
               <p>
-                We tear down your current ad accounts, tracking pixels, competitors, and website drop-offs to pinpoint exact revenue leaks.
+                We tear down historical ad spend, tracking pixels, search share, and mobile conversion friction to reveal hidden revenue leaks.
               </p>
             </div>
 
-            <div className="blueprint-step-card">
-              <span className="step-counter">02</span>
+            <div className="blueprint-card">
+              <span className="blueprint-num">02</span>
               <h4>Multi-Channel Strategy</h4>
               <p>
-                We formulate high-converting offers, audience targeting roadmaps, and unified attribution models across Google, Meta, and SEO.
+                We craft high-converting offers, audience maps, and unified attribution models across Google, Meta, and organic search.
               </p>
             </div>
 
-            <div className="blueprint-step-card">
-              <span className="step-counter">03</span>
+            <div className="blueprint-card">
+              <span className="blueprint-num">03</span>
               <h4>Rapid Creative Sprints</h4>
               <p>
-                We produce dozens of custom UGC hooks, static designs, and landing page variants weekly to rapidly lower customer acquisition cost.
+                We produce fresh UGC video hooks, static creatives, and landing page variations weekly to continually drive down acquisition costs.
               </p>
             </div>
 
-            <div className="blueprint-step-card">
-              <span className="step-counter">04</span>
+            <div className="blueprint-card">
+              <span className="blueprint-num">04</span>
               <h4>Aggressive Scaling</h4>
               <p>
-                We double down on winning campaigns, eliminate unprofitable segments, and scale daily budgets with consistent, predictable ROAS.
+                We reallocate capital into top-performing funnels and scale daily budgets while maintaining high, predictable ROAS.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== CLIENT TESTIMONIALS SECTION ===== */}
+      {/* ===== FOUNDER TESTIMONIALS ===== */}
       <section className="work-testimonials-section">
-        <div className="testimonials-container">
-          <div className="testimonials-header">
-            <p className="work-eyebrow">WHAT FOUNDERS SAY</p>
+        <div className="testimonials-wrap">
+          <div className="testimonials-header-centered">
+            <span className="work-eyebrow-tag">CLIENT FEEDBACK</span>
             <h2>
-              Trusted By <span>Ambitious Businesses</span>
+              What Founders & <span>Growth Leaders Say</span>
             </h2>
           </div>
 
           <div className="testimonials-grid">
             <div className="testimonial-card">
-              <div className="quote-icon">“</div>
-              <p className="quote-text">
-                KLIQURA turned our Meta Ads from an unpredictable expense into our most profitable growth machine. Their creative testing speed and ROAS discipline are unmatched in the industry.
+              <p className="testimonial-quote">
+                “KLIQURA turned our Meta Ads from an unpredictable cost center into our highest-margin revenue engine. Their creative testing velocity and ROAS discipline are exceptional.”
               </p>
-              <div className="quote-author-info">
-                <strong>Aditi S.</strong>
+              <div className="testimonial-author">
+                <strong>Aditi Sharma</strong>
                 <span>Founder, Aura Threaded (D2C Apparel)</span>
               </div>
             </div>
 
             <div className="testimonial-card">
-              <div className="quote-icon">“</div>
-              <p className="quote-text">
-                We saved lakhs in third-party hotel commissions within 4 months. KLIQURA made our resort the first organic search result travelers see when booking luxury stays in Udaipur.
+              <p className="testimonial-quote">
+                “Direct hotel bookings jumped 340% within 4 months. We saved lakhs in booking portal commissions thanks to their local SEO dominance in Udaipur.”
               </p>
-              <div className="quote-author-info">
-                <strong>Vikramaditya S.</strong>
+              <div className="testimonial-author">
+                <strong>Vikramaditya Singh</strong>
                 <span>Managing Director, The Royal Haveli</span>
               </div>
             </div>
 
             <div className="testimonial-card">
-              <div className="quote-icon">“</div>
-              <p className="quote-text">
-                Transparent, aggressive, and 100% focused on bankable numbers. KLIQURA isn&apos;t just an external agency; they operate as our in-house growth and performance department.
+              <p className="testimonial-quote">
+                “Transparent, aggressive, and 100% focused on bankable metrics. KLIQURA operates as an essential extension of our core growth and demand gen team.”
               </p>
-              <div className="quote-author-info">
-                <strong>Rohan M.</strong>
+              <div className="testimonial-author">
+                <strong>Rohan Mehta</strong>
                 <span>VP Growth, CloudPulse CRM</span>
               </div>
             </div>
@@ -496,24 +522,23 @@ export default function Work() {
         </div>
       </section>
 
-      {/* ===== FINAL CONVERSION CALL TO ACTION ===== */}
+      {/* ===== HIGH-CONVERTING BOTTOM CTA ===== */}
       <section className="work-cta-section">
-        <div className="work-cta-container">
-          <span className="cta-mini-tag">YOUR BRAND COULD BE OUR NEXT CASE STUDY</span>
+        <div className="work-cta-wrap">
+          <span className="cta-kicker">LET&apos;S GROW TOGETHER</span>
           <h2>
-            Ready to Turn Digital Marketing Into Your <span>Highest-Return Investment?</span>
+            Ready to Turn Marketing Into Your <span>Highest-Return Asset?</span>
           </h2>
           <p>
-            Stop guessing with your ad budgets and SEO. Book a complimentary 30-minute growth teardown where we analyze your channels and give you an actionable roadmap.
+            Stop burning budget on guesswork. Book a free 30-minute growth teardown with our senior strategists to uncover untapped revenue in your funnel.
           </p>
-
-          <div className="cta-actions">
+          <div className="cta-btn-wrap">
             <Link
               to="/contact"
               onClick={handleLinkClick}
-              className="work-btn-cta"
+              className="btn-cta-main"
             >
-              Claim Your Free Growth Audit <span className="btn-arrow">↗</span>
+              Claim Your Free Growth Audit ↗
             </Link>
           </div>
         </div>
@@ -552,15 +577,6 @@ export default function Work() {
               </div>
             </div>
 
-            <div className="modal-badges-row">
-              {activeModal.badges.map((b, idx) => (
-                <div className="modal-badge-box" key={idx}>
-                  <strong>{b.value}</strong>
-                  <span>{b.label}</span>
-                </div>
-              ))}
-            </div>
-
             <div className="modal-body-content">
               <div className="modal-section-block">
                 <h4>The Challenge</h4>
@@ -569,11 +585,11 @@ export default function Work() {
 
               <div className="modal-section-block">
                 <h4>The KLIQURA Strategy</h4>
-                <ul>
+                <ul className="modal-list">
                   {activeModal.strategy.map((item, idx) => (
                     <li key={idx}>
                       <span className="bullet-tick">✓</span>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -581,11 +597,11 @@ export default function Work() {
 
               <div className="modal-section-block">
                 <h4>Key Concrete Results</h4>
-                <ul>
+                <ul className="modal-list">
                   {activeModal.results.map((item, idx) => (
                     <li key={idx}>
                       <span className="bullet-star">★</span>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
