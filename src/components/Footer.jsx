@@ -47,6 +47,14 @@ function Footer() {
             <p className="footer-brand-tagline">
               We make your next click count.
             </p>
+            <div style={{ marginTop: "6px", fontSize: "14px", lineHeight: "1.6", color: "#051c52" }}>
+              <p style={{ margin: "4px 0", fontWeight: 600 }}>
+                📞 <a href="tel:+918239266744" style={{ color: "#051c52", textDecoration: "none" }}>+91 82392 66744</a>
+              </p>
+              <p style={{ margin: "4px 0", fontWeight: 500 }}>
+                📍 19, Hiran Magri Sector 13, Near Mining Dept, Udaipur
+              </p>
+            </div>
           </div>
 
           {/* Services Grid with Wide Spacing between Columns */}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import contactMascot from "../assets/contact-mascot.png";
 
 const SERVICE_ID = "service_allip0n";
 const TEMPLATE_ID = "template_0pt94nq";
@@ -146,7 +147,7 @@ export default function Contact() {
                 Jump to Inquiry Form ↓
               </a>
               <a
-                href="https://wa.me/919999999999?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20scaling%20my%20digital%20marketing%20revenue."
+                href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20scaling%20my%20digital%20marketing%20revenue."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-hero-whatsapp"
@@ -215,7 +216,15 @@ export default function Contact() {
                     <span className="pass-icon">📍</span>
                     <div>
                       <span className="pass-item-title">Headquarters</span>
-                      <p>Udaipur, Rajasthan, India</p>
+                      <p>19, Hiran Magri Sector 13, Near Mining Dept, Udaipur</p>
+                    </div>
+                  </div>
+
+                  <div className="pass-item">
+                    <span className="pass-icon">📞</span>
+                    <div>
+                      <span className="pass-item-title">Direct Call</span>
+                      <a href="tel:+918239266744">+91 82392 66744</a>
                     </div>
                   </div>
 
@@ -242,64 +251,184 @@ export default function Contact() {
       <section id="inquiry-form-section" className="contact-main-section">
         <div className="contact-main-grid">
           {/* Left Column: Direct Info, Operating Hours, Channels */}
+          {/* Left Column: Contact Information Cards Matching Screenshot */}
           <div className="contact-info-column">
-            <div className="info-intro-box">
-              <span className="info-kicker">DIRECT REACH</span>
-              <h2>Speak Directly With Our Growth Team</h2>
-              <p>
-                Have a question before submitting? Reach out across our direct channels. We value transparency
-                and respond without sales pressure.
-              </p>
-            </div>
+            <h2 style={{
+              fontSize: "32px",
+              fontWeight: "900",
+              color: "#0f172a",
+              margin: "0 0 4px",
+              fontFamily: "'Manrope', sans-serif",
+              letterSpacing: "-0.5px"
+            }}>
+              Contact Information
+            </h2>
 
-            <div className="info-cards-list">
-              {/* Card 1: Email */}
-              <div className="info-item-card">
-                <div className="info-icon-box">📧</div>
-                <div className="info-text-box">
-                  <span className="info-label">OFFICIAL EMAIL</span>
-                  <a href="mailto:kliqura@gmail.com" className="info-primary-link">
+            <div className="contact-info-cards-exact" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              {/* Card 1: Email Us */}
+              <div style={{
+                background: "#ffffff",
+                border: "1.5px solid #e2e8f0",
+                borderRadius: "28px",
+                padding: "20px 24px",
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
+              }}>
+                <div style={{
+                  width: "56px",
+                  height: "56px",
+                  minWidth: "56px",
+                  borderRadius: "18px",
+                  border: "1.5px solid #8b5cf6",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "#ffffff"
+                }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
+                    Email Us
+                  </div>
+                  <a href="mailto:kliqura@gmail.com" style={{ fontSize: "17px", fontWeight: "800", color: "#0f172a", textDecoration: "none", wordBreak: "break-all" }}>
                     kliqura@gmail.com
                   </a>
-                  <span className="info-sub-note">Directly monitored for inbound briefs</span>
                 </div>
               </div>
 
-              {/* Card 2: Business Hours */}
-              <div className="info-item-card">
-                <div className="info-icon-box">🕒</div>
-                <div className="info-text-box">
-                  <span className="info-label">OPERATING TIMINGS</span>
-                  <strong className="info-strong">Monday to Saturday: 9:30 AM – 6:30 PM (IST)</strong>
-                  <span className="info-sub-note">Sunday: Closed (Client emergency support only)</span>
+              {/* Card 2: Call / WhatsApp Us */}
+              <div style={{
+                background: "#ffffff",
+                border: "1.5px solid #e2e8f0",
+                borderRadius: "28px",
+                padding: "20px 24px",
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
+              }}>
+                <div style={{
+                  width: "56px",
+                  height: "56px",
+                  minWidth: "56px",
+                  borderRadius: "18px",
+                  border: "1.5px solid #8b5cf6",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "#ffffff"
+                }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
                 </div>
-              </div>
-
-              {/* Card 3: Headquarters Location */}
-              <div className="info-item-card">
-                <div className="info-icon-box">📍</div>
-                <div className="info-text-box">
-                  <span className="info-label">HEADQUARTERS</span>
-                  <strong className="info-strong">Udaipur, Rajasthan, India</strong>
-                  <span className="info-sub-note">Serving clients across India & global markets</span>
-                </div>
-              </div>
-
-              {/* Card 4: WhatsApp Priority Chat */}
-              <div className="info-item-card">
-                <div className="info-icon-box">💬</div>
-                <div className="info-text-box">
-                  <span className="info-label">WHATSAPP PRIORITY DESK</span>
-                  <a
-                    href="https://wa.me/919999999999?text=Hi%20KLIQURA%2C%20I%20am%20interested%20in%20scaling%20my%20digital%20marketing%20growth."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="info-whatsapp-link"
-                  >
-                    Start Instant WhatsApp Chat ↗
+                <div>
+                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
+                    Call / WhatsApp Us
+                  </div>
+                  <a href="tel:+918239266744" style={{ fontSize: "18px", fontWeight: "800", color: "#0f172a", textDecoration: "none" }}>
+                    +91 82392 66744
                   </a>
-                  <span className="info-sub-note">Direct line for quick scope & pricing answers</span>
                 </div>
+              </div>
+
+              {/* Card 3: Location */}
+              <div style={{
+                background: "#ffffff",
+                border: "1.5px solid #e2e8f0",
+                borderRadius: "28px",
+                padding: "20px 24px",
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
+              }}>
+                <div style={{
+                  width: "56px",
+                  height: "56px",
+                  minWidth: "56px",
+                  borderRadius: "18px",
+                  border: "1.5px solid #8b5cf6",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "#ffffff"
+                }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
+                    Location
+                  </div>
+                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#0f172a", lineHeight: "1.4" }}>
+                    19, Hiran Magri Sector 13, Near Mining Department, Udaipur
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4: FAST EXECUTION + WhatsApp Button */}
+              <div style={{
+                background: "#ffffff",
+                border: "1.5px solid #e2e8f0",
+                borderRadius: "28px",
+                padding: "22px 24px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "18px",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+                  <img
+                    src={contactMascot}
+                    alt="Fast Execution"
+                    style={{ width: "58px", height: "auto", objectFit: "contain" }}
+                  />
+                  <div style={{ textAlign: "left" }}>
+                    <div style={{ color: "#6b21a8", fontSize: "14px", fontWeight: "900", letterSpacing: "1px", textTransform: "uppercase" }}>
+                      FAST EXECUTION
+                    </div>
+                    <div style={{ color: "#475569", fontSize: "13.5px", fontWeight: "500", marginTop: "2px" }}>
+                      Prefer direct chat over forms?
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    background: "#22c55e",
+                    color: "#ffffff",
+                    borderRadius: "14px",
+                    padding: "14px 20px",
+                    fontWeight: "800",
+                    fontSize: "15px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                    boxShadow: "0 4px 14px rgba(34, 197, 94, 0.35)",
+                    transition: "background 0.2s"
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#16a34a")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "#22c55e")}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.07c-.24.68-1.2 1.25-1.66 1.29-.44.04-.98.17-3.18-.74-2.58-1.07-4.22-3.71-4.35-3.88-.13-.17-1.05-1.4-1.05-2.67 0-1.27.67-1.89.9-2.14.24-.25.53-.31.71-.31.18 0 .36 0 .51.01.17.01.39-.06.6.46.24.57.77 1.9.84 2.04.07.15.11.32.02.51-.08.18-.13.29-.26.44-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.25.66 1.09 1.42 1.77.97.87 1.8 1.14 2.05 1.27.26.13.41.11.56-.06.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.08 1.5.71 1.76.84.26.13.43.2.49.31.07.11.07.65-.17 1.33z" />
+                  </svg>
+                  <span>Quick Chat on WhatsApp</span>
+                </a>
               </div>
             </div>
 
@@ -345,7 +474,7 @@ export default function Contact() {
                     <div className="success-instant-whatsapp">
                       <span>Need an immediate response?</span>
                       <a
-                        href={`https://wa.me/919999999999?text=Hi%20KLIQURA%2C%20I%20just%20submitted%20an%20inquiry%20on%20your%20website.%20My%20name%20is%20${encodeURIComponent(
+                        href={`https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20just%20submitted%20an%20inquiry%20on%20your%20website.%20My%20name%20is%20${encodeURIComponent(
                           submittedData.name
                         )}%20and%20I%20need%20help%20with%20${encodeURIComponent(submittedData.service)}.`}
                         target="_blank"
@@ -530,7 +659,7 @@ export default function Contact() {
                 <span className="pin-live-dot" />
                 <strong>KLIQURA Digital Agency HQ</strong>
                 <span className="topbar-sep">•</span>
-                <span>Udaipur, Rajasthan 313001</span>
+                <span>19, Hiran Magri Sector 13, Near Mining Department, Udaipur</span>
               </div>
               <div className="map-topbar-right">
                 <span className="hours-pill">🕒 Open Mon – Sat: 9:30 AM – 6:30 PM</span>
@@ -539,8 +668,8 @@ export default function Contact() {
 
             <div className="google-map-embed-wrap">
               <iframe
-                title="KLIQURA Location Map - Udaipur Rajasthan"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116086.0359779953!2d73.65593845929645!3d24.608361099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e56550a14411%3A0xdbd8c28455b868b0!2sUdaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="KLIQURA Location Map - Hiran Magri Sector 13 Udaipur"
+                src="https://maps.google.com/maps?q=19%2C%20hiran%20magri%20sector%2013%2C%20near%20mining%20department%2C%20udaipur&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="420"
                 style={{ border: 0 }}

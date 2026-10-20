@@ -67,7 +67,7 @@ function Chatbot() {
       text.includes("where") ||
       text.includes("rajasthan")
     ) {
-      return "📍 KLIQURA Headquarters:\nWe are located in Udaipur, Rajasthan, India! We work with brands locally in Udaipur and across India/globally to drive measurable digital growth.";
+      return "📍 KLIQURA Headquarters:\n19, Hiran Magri Sector 13, Near Mining Department, Udaipur, Rajasthan.\n\n📞 Phone: +91 82392 66744\n💬 WhatsApp: +91 82392 66744";
     }
 
     // 4. PRICING, FEES & FREE AUDIT
@@ -96,7 +96,7 @@ function Chatbot() {
       text.includes("whatsapp") ||
       text.includes("number")
     ) {
-      return "📬 Get in touch with KLIQURA:\n• Email: kliqura@gmail.com\n• Contact Form: Visit our Contact page to fill out our automated form\n• Working Hours: Mon–Sat, 9:30 AM – 6:30 PM IST\nOur strategists review all inquiries within 2 to 4 business hours.";
+      return "📬 Get in touch with KLIQURA:\n• Phone: +91 82392 66744\n• WhatsApp: +91 82392 66744\n• Email: kliqura@gmail.com\n• Address: 19, Hiran Magri Sector 13, Near Mining Department, Udaipur\n• Working Hours: Mon–Sat, 9:30 AM – 6:30 PM IST\nOur strategists review all inquiries within 2 to 4 business hours.";
     }
 
     // 6. GREETINGS
