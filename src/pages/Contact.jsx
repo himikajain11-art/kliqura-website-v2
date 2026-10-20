@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
-import contactMascot from "../assets/contact-mascot.png";
 
 const SERVICE_ID = "service_allip0n";
 const TEMPLATE_ID = "template_0pt94nq";
@@ -332,9 +331,30 @@ export default function Contact() {
                   <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
                     Call / WhatsApp Us
                   </div>
-                  <a href="tel:+918239266744" style={{ fontSize: "18px", fontWeight: "800", color: "#0f172a", textDecoration: "none" }}>
-                    +91 82392 66744
-                  </a>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                    <a href="tel:+918239266744" style={{ fontSize: "18px", fontWeight: "800", color: "#0f172a", textDecoration: "none" }}>
+                      +91 82392 66744
+                    </a>
+                    <a
+                      href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        background: "#22c55e",
+                        color: "#ffffff",
+                        borderRadius: "8px",
+                        padding: "5px 12px",
+                        fontSize: "12.5px",
+                        fontWeight: "700",
+                        textDecoration: "none",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px"
+                      }}
+                    >
+                      <span>WhatsApp ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -373,62 +393,6 @@ export default function Contact() {
                     19, Hiran Magri Sector 13, Near Mining Department, Udaipur
                   </div>
                 </div>
-              </div>
-
-              {/* Card 4: FAST EXECUTION + WhatsApp Button */}
-              <div style={{
-                background: "#ffffff",
-                border: "1.5px solid #e2e8f0",
-                borderRadius: "28px",
-                padding: "22px 24px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "18px",
-                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
-              }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
-                  <img
-                    src={contactMascot}
-                    alt="Fast Execution"
-                    style={{ width: "58px", height: "auto", objectFit: "contain" }}
-                  />
-                  <div style={{ textAlign: "left" }}>
-                    <div style={{ color: "#6b21a8", fontSize: "14px", fontWeight: "900", letterSpacing: "1px", textTransform: "uppercase" }}>
-                      FAST EXECUTION
-                    </div>
-                    <div style={{ color: "#475569", fontSize: "13.5px", fontWeight: "500", marginTop: "2px" }}>
-                      Prefer direct chat over forms?
-                    </div>
-                  </div>
-                </div>
-
-                <a
-                  href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    background: "#22c55e",
-                    color: "#ffffff",
-                    borderRadius: "14px",
-                    padding: "14px 20px",
-                    fontWeight: "800",
-                    fontSize: "15px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    textDecoration: "none",
-                    boxShadow: "0 4px 14px rgba(34, 197, 94, 0.35)",
-                    transition: "background 0.2s"
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#16a34a")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#22c55e")}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.07c-.24.68-1.2 1.25-1.66 1.29-.44.04-.98.17-3.18-.74-2.58-1.07-4.22-3.71-4.35-3.88-.13-.17-1.05-1.4-1.05-2.67 0-1.27.67-1.89.9-2.14.24-.25.53-.31.71-.31.18 0 .36 0 .51.01.17.01.39-.06.6.46.24.57.77 1.9.84 2.04.07.15.11.32.02.51-.08.18-.13.29-.26.44-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.25.66 1.09 1.42 1.77.97.87 1.8 1.14 2.05 1.27.26.13.41.11.56-.06.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.08 1.5.71 1.76.84.26.13.43.2.49.31.07.11.07.65-.17 1.33z" />
-                  </svg>
-                  <span>Quick Chat on WhatsApp</span>
-                </a>
               </div>
             </div>
 
