@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import {
+  FaLocationDot,
+  FaPhone,
+  FaEnvelope,
+  FaWhatsapp,
+  FaArrowRight,
+  FaCheck,
+} from "react-icons/fa6";
 
 const SERVICE_ID = "service_allip0n";
 const TEMPLATE_ID = "template_0pt94nq";
@@ -29,13 +37,12 @@ export default function Contact() {
     }));
   }
 
-  const handleSmoothScroll = (e) => {
-    e.preventDefault();
-    const el = document.getElementById("inquiry-form-section");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  function handleQuickServiceSelect(serviceName) {
+    setFormData((prev) => ({
+      ...prev,
+      service: serviceName,
+    }));
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -53,7 +60,6 @@ export default function Contact() {
       "Project Goals / Message": formData.message,
     };
 
-    // Save copy for WhatsApp button
     setSubmittedData({ ...formData });
 
     try {
@@ -111,331 +117,187 @@ export default function Contact() {
     }
   }
 
+  const quickServices = [
+    {
+      key: "A",
+      label: "Performance Marketing (Meta & Google Ads)",
+      display: "Scale Meta & Google ROAS",
+    },
+    {
+      key: "B",
+      label: "SEO & Search Dominance",
+      display: "Dominate Local & National SEO",
+    },
+    {
+      key: "C",
+      label: "Website Optimization & CRO",
+      display: "Need a High-Converting Website",
+    },
+    {
+      key: "D",
+      label: "Comprehensive 30-Min Marketing Audit",
+      display: "Claim Free 30-Min Growth Audit",
+    },
+  ];
+
   return (
-    <main className="contact-page">
-      {/* ===== HERO SECTION: DISTINCTIVE, BALANCED 2-COLUMN LUXURY LAYOUT ===== */}
-      <section className="contact-hero-clean">
-        <div className="contact-hero-ambient" />
-        <div className="contact-hero-wrap">
-          {/* Left Column: Bold Headline & Trust Strip */}
-          <div className="contact-hero-left">
-            <div className="contact-badge-wrap">
-              <span className="contact-badge-pill">
-                <span className="badge-pulse" />
-                START A CONVERSATION • DIRECT STRATEGY DESK
-              </span>
-            </div>
-
-            <h1 className="contact-hero-title">
-              Let’s Build Something
-              <span className="contact-title-gradient"> That Scales Your Revenue.</span>
-            </h1>
-
-            <p className="contact-hero-subtitle">
-              Whether you want to scale your Meta/Google ROAS past 5×, dominate Google search rankings in Udaipur
-              or nationally, or eliminate drop-offs in your sales funnel—our senior growth strategists are ready.
-            </p>
-
-            {/* Quick Actions */}
-            <div className="contact-hero-actions">
-              <a
-                href="#inquiry-form-section"
-                onClick={handleSmoothScroll}
-                className="btn-jump-form"
-              >
-                Jump to Inquiry Form ↓
-              </a>
-              <a
-                href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20scaling%20my%20digital%20marketing%20revenue."
-                target="_blank"
-                rel="noreferrer"
-                className="btn-hero-whatsapp"
-              >
-                Instant WhatsApp Chat ↗
-              </a>
-            </div>
-
-            {/* Trust Matrix Strip */}
-            <div className="contact-trust-matrix">
-              <div className="trust-matrix-item">
-                <span className="trust-icon">⚡</span>
-                <div className="trust-text">
-                  <strong>2 to 4 Hours</strong>
-                  <span>Fast Review Guarantee</span>
-                </div>
-              </div>
-              <div className="trust-matrix-sep" />
-              <div className="trust-matrix-item">
-                <span className="trust-icon">🔒</span>
-                <div className="trust-text">
-                  <strong>100% NDA</strong>
-                  <span>Confidential Data</span>
-                </div>
-              </div>
-              <div className="trust-matrix-sep" />
-              <div className="trust-matrix-item">
-                <span className="trust-icon">🎁</span>
-                <div className="trust-text">
-                  <strong>₹0 Cost</strong>
-                  <span>30-Min Growth Teardown</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Interactive Agency Availability Pass */}
-          <div className="contact-hero-right">
-            <div className="agency-pass-card">
-              <div className="pass-card-header">
-                <div className="pass-status-row">
-                  <span className="pass-live-dot" />
-                  <strong className="pass-title">KLIQURA STRATEGY DESK</strong>
-                </div>
-                <span className="pass-status-pill">● Accepting Clients</span>
-              </div>
-
-              <div className="pass-body">
-                <div className="pass-meta-row">
-                  <span className="pass-meta-label">CURRENT AVAILABILITY</span>
-                  <strong className="pass-meta-val">Q4 Growth Consultations Open</strong>
-                </div>
-
-                <div className="pass-divider" />
-
-                <div className="pass-items-list">
-                  <div className="pass-item">
-                    <span className="pass-icon">🕒</span>
-                    <div>
-                      <span className="pass-item-title">Operating Timings</span>
-                      <p>Mon – Sat: 9:30 AM – 6:30 PM IST</p>
-                    </div>
-                  </div>
-
-                  <div className="pass-item">
-                    <span className="pass-icon">📍</span>
-                    <div>
-                      <span className="pass-item-title">Headquarters</span>
-                      <p>19, Hiran Magri Sector 13, Near Mining Dept, Udaipur</p>
-                    </div>
-                  </div>
-
-                  <div className="pass-item">
-                    <span className="pass-icon">📞</span>
-                    <div>
-                      <span className="pass-item-title">Direct Call</span>
-                      <a href="tel:+918239266744">+91 82392 66744</a>
-                    </div>
-                  </div>
-
-                  <div className="pass-item">
-                    <span className="pass-icon">📧</span>
-                    <div>
-                      <span className="pass-item-title">Direct Inbox</span>
-                      <a href="mailto:kliqura@gmail.com">kliqura@gmail.com</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pass-footer-box">
-                  <span className="pass-badge">VERIFIED AGENCY</span>
-                  <span>Average Client Onboarding: 5 Days from Audit</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main className="contact-page-modern">
+      {/* ===== HEADER BLOCK: CLEAN TYPOGRAPHY ===== */}
+      <section className="contact-header-section">
+        <div className="contact-header-wrap">
+          <span className="contact-kicker-tag">START A CONVERSATION</span>
+          <h1 className="contact-main-heading">Get In Touch</h1>
+          <p className="contact-main-subtext">
+            Do not hesitate to contact us to tell us about your projects and ideas.
+            We can surely answer your questions and help you scale your business revenue.
+          </p>
         </div>
       </section>
 
-      {/* ===== MAIN 2-COLUMN SECTION: DIRECT INFO & INTERACTIVE FORM ===== */}
-      <section id="inquiry-form-section" className="contact-main-section">
-        <div className="contact-main-grid">
-          {/* Left Column: Direct Info, Operating Hours, Channels */}
-          {/* Left Column: Contact Information Cards Matching Screenshot */}
-          <div className="contact-info-column">
-            <h2 style={{
-              fontSize: "32px",
-              fontWeight: "900",
-              color: "#0f172a",
-              margin: "0 0 4px",
-              fontFamily: "'Manrope', sans-serif",
-              letterSpacing: "-0.5px"
-            }}>
-              Contact Information
-            </h2>
-
-            <div className="contact-info-cards-exact" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {/* Card 1: Email Us */}
-              <div style={{
-                background: "#ffffff",
-                border: "1.5px solid #e2e8f0",
-                borderRadius: "28px",
-                padding: "20px 24px",
-                display: "flex",
-                alignItems: "center",
-                gap: "20px",
-                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
-              }}>
-                <div style={{
-                  width: "56px",
-                  height: "56px",
-                  minWidth: "56px",
-                  borderRadius: "18px",
-                  border: "1.5px solid #8b5cf6",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#ffffff"
-                }}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
+      {/* ===== MAIN 2-COLUMN SECTION: BRAND COLORED BOXES + FORM ===== */}
+      <section className="contact-content-section">
+        <div className="contact-content-grid">
+          
+          {/* LEFT COLUMN: BRAND COLORED BOXES (RED, YELLOW, NAVY) */}
+          <div className="contact-boxes-column">
+            
+            {/* BOX 1: Strawberry Red Border (#E34E4E) — Headquarters Location */}
+            <div className="contact-brand-card card-border-red">
+              <span className="card-pill-badge badge-red">India Office • Headquarters</span>
+              
+              <div className="card-body-row">
+                <div className="card-icon-circle icon-red">
+                  <FaLocationDot />
                 </div>
-                <div>
-                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
-                    Email Us
-                  </div>
-                  <a href="mailto:kliqura@gmail.com" style={{ fontSize: "17px", fontWeight: "800", color: "#0f172a", textDecoration: "none", wordBreak: "break-all" }}>
-                    kliqura@gmail.com
-                  </a>
+                <div className="card-text-block">
+                  <strong className="card-agency-title">KLIQURA Digital Agency</strong>
+                  <p className="card-address-desc">
+                    19, Hiran Magri Sector 13, Near Mining Department, Udaipur - 313002 (Rajasthan) India
+                  </p>
                 </div>
               </div>
 
-              {/* Card 2: Call / WhatsApp Us */}
-              <div style={{
-                background: "#ffffff",
-                border: "1.5px solid #e2e8f0",
-                borderRadius: "28px",
-                padding: "20px 24px",
-                display: "flex",
-                alignItems: "center",
-                gap: "20px",
-                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
-              }}>
-                <div style={{
-                  width: "56px",
-                  height: "56px",
-                  minWidth: "56px",
-                  borderRadius: "18px",
-                  border: "1.5px solid #8b5cf6",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#ffffff"
-                }}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                </div>
-                <div>
-                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
-                    Call / WhatsApp Us
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                    <a href="tel:+918239266744" style={{ fontSize: "18px", fontWeight: "800", color: "#0f172a", textDecoration: "none" }}>
-                      +91 82392 66744
-                    </a>
-                    <a
-                      href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{
-                        background: "#22c55e",
-                        color: "#ffffff",
-                        borderRadius: "8px",
-                        padding: "5px 12px",
-                        fontSize: "12.5px",
-                        fontWeight: "700",
-                        textDecoration: "none",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "6px"
-                      }}
-                    >
-                      <span>WhatsApp ↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 3: Location */}
-              <div style={{
-                background: "#ffffff",
-                border: "1.5px solid #e2e8f0",
-                borderRadius: "28px",
-                padding: "20px 24px",
-                display: "flex",
-                alignItems: "center",
-                gap: "20px",
-                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.03)"
-              }}>
-                <div style={{
-                  width: "56px",
-                  height: "56px",
-                  minWidth: "56px",
-                  borderRadius: "18px",
-                  border: "1.5px solid #8b5cf6",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#ffffff"
-                }}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div>
-                  <div style={{ fontSize: "13.5px", color: "#64748b", fontWeight: "500", marginBottom: "4px" }}>
-                    Location
-                  </div>
-                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#0f172a", lineHeight: "1.4" }}>
-                    19, Hiran Magri Sector 13, Near Mining Department, Udaipur
-                  </div>
-                </div>
+              <div className="card-action-wrap">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=19,+hiran+magri+sector+13,+near+mining+department,+udaipur"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-card-action btn-red-action"
+                >
+                  <span>Get Direction</span>
+                  <FaArrowRight className="action-arrow" />
+                </a>
               </div>
             </div>
 
-            {/* What Happens Next Card */}
-            <div className="next-steps-card">
-              <h4>What happens after you reach out?</h4>
-              <ol className="next-steps-list">
-                <li>
-                  <strong>1. Forensic Review:</strong> We analyze your current ad accounts, search rankings, and competitors.
-                </li>
-                <li>
-                  <strong>2. Strategy Call:</strong> A private 30-minute consultation with our Senior Strategist.
-                </li>
-                <li>
-                  <strong>3. Action Roadmap:</strong> A transparent roadmap with projected ROAS, CAC targets, and timelines.
-                </li>
-              </ol>
+            {/* BOX 2: School Bus Yellow Border (#FFC300) — Direct Hotline & WhatsApp */}
+            <div className="contact-brand-card card-border-yellow">
+              <span className="card-pill-badge badge-yellow">Direct Hotline & WhatsApp</span>
+              
+              <div className="card-body-row">
+                <div className="card-icon-circle icon-yellow">
+                  <FaPhone />
+                </div>
+                <div className="card-text-block">
+                  <strong className="card-agency-title">+91 82392 66744</strong>
+                  <p className="card-address-desc">
+                    Direct strategy line for instant scope, audit teardowns, and quick onboarding.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card-action-wrap dual-actions">
+                <a
+                  href="tel:+918239266744"
+                  className="btn-card-action btn-yellow-action"
+                >
+                  <FaPhone />
+                  <span>Call Us</span>
+                </a>
+                <a
+                  href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-card-action btn-wa-action"
+                >
+                  <FaWhatsapp />
+                  <span>WhatsApp Chat ↗</span>
+                </a>
+              </div>
             </div>
+
+            {/* BOX 3: Deep Navy Border (#051C52) — Official Inbox & Working Hours */}
+            <div className="contact-brand-card card-border-navy">
+              <span className="card-pill-badge badge-navy">Official Inbox & Hours</span>
+              
+              <div className="card-body-row">
+                <div className="card-icon-circle icon-navy">
+                  <FaEnvelope />
+                </div>
+                <div className="card-text-block">
+                  <strong className="card-agency-title">kliqura@gmail.com</strong>
+                  <p className="card-address-desc">
+                    Monday to Saturday: 9:30 AM – 6:30 PM (IST) • Direct response within 2 to 4 business hours.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card-action-wrap">
+                <a
+                  href="mailto:kliqura@gmail.com"
+                  className="btn-card-action btn-navy-action"
+                >
+                  <span>Send Direct Email</span>
+                  <FaArrowRight className="action-arrow" />
+                </a>
+              </div>
+            </div>
+
           </div>
 
-          {/* Right Column: High-Converting Automated Inquiry Form */}
-          <div className="contact-form-column">
-            <div className="form-card-container">
-              <div className="form-card-header">
+          {/* RIGHT COLUMN: INTERACTIVE SERVICE SELECTOR & AUDIT FORM */}
+          <div className="contact-form-column-wrap">
+            <div className="contact-interactive-card">
+              
+              <div className="card-form-header">
                 <h3>Claim Your Free 30-Min Growth Audit</h3>
-                <p>Fill out the brief below. Your submission routes automatically to <strong>kliqura@gmail.com</strong>.</p>
+                <p>Pick your primary business goal or write your custom brief below:</p>
+              </div>
+
+              {/* Quick Interactive Service Chips (A, B, C, D) */}
+              <div className="quick-service-chips-grid">
+                {quickServices.map((srv) => {
+                  const isSelected = formData.service === srv.label;
+                  return (
+                    <button
+                      key={srv.key}
+                      type="button"
+                      onClick={() => handleQuickServiceSelect(srv.label)}
+                      className={`service-chip-btn ${isSelected ? "selected-chip" : ""}`}
+                    >
+                      <span className="chip-key-badge">{srv.key}</span>
+                      <span className="chip-text">{srv.display}</span>
+                    </button>
+                  );
+                })}
               </div>
 
               {submitStatus === "success" ? (
-                <div className="form-success-state">
-                  <div className="success-icon-badge">✓</div>
-                  <h3>Inquiry Dispatched Successfully!</h3>
+                <div className="form-success-box">
+                  <div className="success-icon-badge">
+                    <FaCheck />
+                  </div>
+                  <h3>Brief Dispatched Successfully!</h3>
                   <p>
                     Thank you for reaching out to <strong>KLIQURA</strong>. Your project brief has been automatically
-                    forwarded to <strong>kliqura@gmail.com</strong>.
+                    routed to <strong>kliqura@gmail.com</strong>.
                   </p>
-                  <div className="success-promise">
-                    Our lead growth strategist will review your brand details and get back to you within <strong>2 to 4 business hours</strong>.
+                  <div className="success-note">
+                    Our lead strategist will review your brand metrics and reach out within <strong>2 to 4 business hours</strong>.
                   </div>
 
-                  {/* Immediate WhatsApp Follow-up Option */}
                   {submittedData && (
-                    <div className="success-instant-whatsapp">
+                    <div className="success-whatsapp-followup">
                       <span>Need an immediate response?</span>
                       <a
                         href={`https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20just%20submitted%20an%20inquiry%20on%20your%20website.%20My%20name%20is%20${encodeURIComponent(
@@ -443,27 +305,28 @@ export default function Contact() {
                         )}%20and%20I%20need%20help%20with%20${encodeURIComponent(submittedData.service)}.`}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn-success-whatsapp"
+                        className="btn-success-wa"
                       >
-                        Ping Us on WhatsApp with Your Details ↗
+                        <FaWhatsapp />
+                        <span>Ping Us on WhatsApp with Your Details ↗</span>
                       </a>
                     </div>
                   )}
 
                   <button
                     type="button"
-                    className="btn-send-another"
+                    className="btn-send-another-brief"
                     onClick={() => setSubmitStatus(null)}
                   >
                     Submit Another Brief ↺
                   </button>
                 </div>
               ) : (
-                <form className="interactive-contact-form" onSubmit={handleSubmit}>
+                <form className="contact-actual-form" onSubmit={handleSubmit}>
                   {/* Row 1: Name & Email */}
-                  <div className="form-fields-row">
-                    <div className="form-field-group">
-                      <label htmlFor="name">Your Full Name *</label>
+                  <div className="form-two-fields">
+                    <div className="form-group-item">
+                      <label htmlFor="name">Your Name *</label>
                       <input
                         id="name"
                         required
@@ -475,7 +338,7 @@ export default function Contact() {
                       />
                     </div>
 
-                    <div className="form-field-group">
+                    <div className="form-group-item">
                       <label htmlFor="email">Business Email *</label>
                       <input
                         id="email"
@@ -489,10 +352,10 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Row 2: Phone & Business */}
-                  <div className="form-fields-row">
-                    <div className="form-field-group">
-                      <label htmlFor="phone">Phone / WhatsApp Number *</label>
+                  {/* Row 2: Phone & Brand Name */}
+                  <div className="form-two-fields">
+                    <div className="form-group-item">
+                      <label htmlFor="phone">Phone / WhatsApp *</label>
                       <input
                         id="phone"
                         required
@@ -500,11 +363,11 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="e.g. +91 98765 43210"
+                        placeholder="e.g. +91 82392 66744"
                       />
                     </div>
 
-                    <div className="form-field-group">
+                    <div className="form-group-item">
                       <label htmlFor="business">Company or Brand Name</label>
                       <input
                         id="business"
@@ -518,8 +381,8 @@ export default function Contact() {
                   </div>
 
                   {/* Row 3: Service Selection */}
-                  <div className="form-field-group">
-                    <label htmlFor="service">Primary Growth Goal / Service *</label>
+                  <div className="form-group-item">
+                    <label htmlFor="service">Selected Service</label>
                     <select
                       id="service"
                       name="service"
@@ -532,12 +395,6 @@ export default function Contact() {
                       <option value="SEO & Search Dominance">
                         ⌕ SEO & Search Dominance (Local Udaipur & National)
                       </option>
-                      <option value="Growth Marketing Architecture">
-                        ↗ Full-Funnel Growth Marketing Strategy
-                      </option>
-                      <option value="Social Media & Viral Reels">
-                        ◎ Social Media Management & Viral Short-Form Video
-                      </option>
                       <option value="Website Optimization & CRO">
                         &lt;/&gt; Website Optimization & Conversion Funnels (CRO)
                       </option>
@@ -547,8 +404,8 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  {/* Row 4: Monthly Budget Range */}
-                  <div className="form-field-group">
+                  {/* Row 4: Monthly Budget */}
+                  <div className="form-group-item">
                     <label htmlFor="budget">Estimated Monthly Marketing Budget</label>
                     <select
                       id="budget"
@@ -563,9 +420,9 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  {/* Row 5: Project Details Message */}
-                  <div className="form-field-group">
-                    <label htmlFor="message">Tell Us About Your Goals & Current Roadblocks *</label>
+                  {/* Row 5: Message */}
+                  <div className="form-group-item">
+                    <label htmlFor="message">Tell Us About Your Project & Goals *</label>
                     <textarea
                       id="message"
                       required
@@ -577,71 +434,59 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-submit-inquiry"
+                    className="btn-submit-contact-form"
                   >
                     {isSubmitting ? (
                       <span>Dispatching to kliqura@gmail.com...</span>
                     ) : (
                       <>
                         <span>Submit Brief For Free Growth Audit</span>
-                        <span className="btn-submit-arrow">↗</span>
+                        <FaArrowRight className="submit-arrow" />
                       </>
                     )}
                   </button>
 
-                  <div className="form-privacy-note">
-                    🔒 100% Confidential. Direct automated delivery to kliqura@gmail.com. We never spam.
+                  <div className="form-guarantee-note">
+                    🔒 100% Confidential. Directly sent to kliqura@gmail.com. We never spam.
                   </div>
                 </form>
               )}
+
             </div>
           </div>
+
         </div>
       </section>
 
       {/* ===== UDAIPUR HEADQUARTERS MAP SECTION ===== */}
-      <section className="contact-map-section">
-        <div className="contact-map-container">
-          <div className="map-header-block">
-            <span className="work-eyebrow-tag">LOCATION & PRESENCE</span>
-            <h2>
-              Visit Our Headquarters in <span>Udaipur, Rajasthan</span>
-            </h2>
-            <p>
-              Located in the City of Lakes. While we partner with brands across the globe,
-              our strategic heart beats in Udaipur. Stop by during our business hours for a fresh cup of coffee and a growth brainstorming session.
-            </p>
+      <section className="contact-map-bottom-section">
+        <div className="map-bottom-wrap">
+          <div className="map-topbar-info">
+            <div className="topbar-location-left">
+              <span className="live-pin-pulse" />
+              <strong>KLIQURA Digital Agency HQ</strong>
+              <span className="sep">•</span>
+              <span>19, Hiran Magri Sector 13, Near Mining Department, Udaipur</span>
+            </div>
+            <div className="topbar-hours-right">
+              <span>🕒 Open Mon – Sat: 9:30 AM – 6:30 PM</span>
+            </div>
           </div>
 
-          <div className="map-frame-card">
-            <div className="map-info-topbar">
-              <div className="map-topbar-left">
-                <span className="pin-live-dot" />
-                <strong>KLIQURA Digital Agency HQ</strong>
-                <span className="topbar-sep">•</span>
-                <span>19, Hiran Magri Sector 13, Near Mining Department, Udaipur</span>
-              </div>
-              <div className="map-topbar-right">
-                <span className="hours-pill">🕒 Open Mon – Sat: 9:30 AM – 6:30 PM</span>
-              </div>
-            </div>
-
-            <div className="google-map-embed-wrap">
-              <iframe
-                title="KLIQURA Location Map - Hiran Magri Sector 13 Udaipur"
-                src="https://maps.google.com/maps?q=19%2C%20hiran%20magri%20sector%2013%2C%20near%20mining%20department%2C%20udaipur&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="420"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+          <div className="map-iframe-container">
+            <iframe
+              title="KLIQURA Location Map - Hiran Magri Sector 13 Udaipur"
+              src="https://maps.google.com/maps?q=19%2C%20hiran%20magri%20sector%2013%2C%20near%20mining%20department%2C%20udaipur&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
