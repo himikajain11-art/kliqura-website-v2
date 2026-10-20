@@ -5,9 +5,11 @@ import logo from "../assets/kliqura-logo.png";
 import {
   FaInstagram,
   FaXTwitter,
-  FaFacebookF,
   FaLinkedinIn,
-  FaArrowUp,
+  FaWhatsapp,
+  FaPhone,
+  FaEnvelope,
+  FaLocationDot,
 } from "react-icons/fa6";
 
 function Footer() {
@@ -18,133 +20,147 @@ function Footer() {
     });
   };
 
-  const servicesCol1 = [
-    { title: "Growth Marketing", path: "/services" },
-    { title: "Performance Marketing", path: "/services" },
-    { title: "SEO", path: "/services" },
-  ];
-
-  const servicesCol2 = [
-    { title: "Content Writing", path: "/services" },
-    { title: "Social Media Management", path: "/services" },
-    { title: "Website Optimization", path: "/services" },
+  const quickLinks = [
+    { title: "Home", path: "/" },
+    { title: "About Us", path: "/about-us" },
+    { title: "Our Services", path: "/services" },
+    { title: "Our Work", path: "/work" },
+    { title: "Blog", path: "/blog" },
+    { title: "Contact Us", path: "/contact-us" },
   ];
 
   return (
     <footer className="kliqura-footer">
       <div className="footer-wrap">
-        {/* ROW 1: Brand (Left) + Services Grid (Center) + Social Icons (Right) */}
-        <div className="footer-main-row">
-          {/* Clean Brand Column on Left (Mess removed) */}
-          <div className="footer-brand-col">
+        {/* MAIN 4-COLUMN GRID MATCHING REFERENCE DESIGN */}
+        <div className="footer-grid-4col">
+          {/* COLUMN 1: Brand Info & WhatsApp Pill Button */}
+          <div className="footer-col footer-col-brand">
             <Link to="/" onClick={handleLinkClick} className="footer-logo-link">
-              <img
-                src={logo}
-                alt="KLIQURA"
-                className="footer-brand-logo"
-              />
+              <img src={logo} alt="KLIQURA" className="footer-brand-logo" />
             </Link>
-            <p className="footer-brand-tagline">
-              We make your next click count.
+            <p className="footer-brand-desc">
+              Transforming brands through high-impact digital marketing,
+              performance ads, modern web systems, and creative visual guidelines.
             </p>
-            <div style={{ marginTop: "6px", fontSize: "14px", lineHeight: "1.6", color: "#051c52" }}>
-              <p style={{ margin: "4px 0", fontWeight: 600 }}>
-                📞 <a href="tel:+918239266744" style={{ color: "#051c52", textDecoration: "none" }}>+91 82392 66744</a>
-              </p>
-              <p style={{ margin: "4px 0", fontWeight: 500 }}>
-                📍 19, Hiran Magri Sector 13, Near Mining Dept, Udaipur
-              </p>
+            <a
+              href="https://wa.me/918239266744?text=Hi%20KLIQURA%2C%20I%20want%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-whatsapp-pill"
+            >
+              <FaWhatsapp className="pill-wa-icon" />
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          {/* COLUMN 2: Quick Links */}
+          <div className="footer-col footer-col-links">
+            <h4 className="footer-col-title">QUICK LINKS</h4>
+            <ul className="footer-links-list">
+              {quickLinks.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    to={item.path}
+                    onClick={handleLinkClick}
+                    className="footer-nav-link"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COLUMN 3: Contact Us */}
+          <div className="footer-col footer-col-contact">
+            <h4 className="footer-col-title">CONTACT US</h4>
+            <div className="footer-contact-items">
+              <a href="tel:+918239266744" className="footer-contact-item">
+                <span className="contact-item-icon">
+                  <FaPhone />
+                </span>
+                <span className="contact-item-text">+91 82392 66744</span>
+              </a>
+
+              <a href="mailto:kliqura@gmail.com" className="footer-contact-item">
+                <span className="contact-item-icon">
+                  <FaEnvelope />
+                </span>
+                <span className="contact-item-text">kliqura@gmail.com</span>
+              </a>
+
+              <div className="footer-contact-item location-item">
+                <span className="contact-item-icon">
+                  <FaLocationDot />
+                </span>
+                <span className="contact-item-text">
+                  19, Hiran Magri Sector 13, Near Mining Dept, Udaipur
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* Services Grid with Wide Spacing between Columns */}
-          <div className="footer-services-grid">
-            {/* Column 1 */}
-            <div className="footer-services-col">
-              {servicesCol1.map((item) => (
-                <Link
-                  key={item.title}
-                  to={item.path}
-                  onClick={handleLinkClick}
-                  className="service-link"
-                >
-                  {item.title}
-                </Link>
-              ))}
+          {/* COLUMN 4: Connect With Us */}
+          <div className="footer-col footer-col-connect">
+            <h4 className="footer-col-title">CONNECT WITH US</h4>
+            <p className="footer-connect-desc">
+              Follow our latest brand showcases, case studies, and creative campaigns across socials.
+            </p>
+            <div className="footer-social-squircles">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="social-squircle"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="social-squircle"
+              >
+                <FaXTwitter />
+              </a>
+
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="social-squircle"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://wa.me/918239266744"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="social-squircle"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
-
-            {/* Column 2 */}
-            <div className="footer-services-col">
-              {servicesCol2.map((item) => (
-                <Link
-                  key={item.title}
-                  to={item.path}
-                  onClick={handleLinkClick}
-                  className="service-link"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Social Media Column on Right */}
-          <div className="footer-social-icons">
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter)"
-            >
-              <FaXTwitter />
-            </a>
-
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
           </div>
         </div>
 
-        {/* ROW 2: Bottom Agency Description + Scroll To Top Button */}
-        <div className="footer-bottom-row">
-          <p className="footer-bottom-text">
-            <strong>KLIQURA</strong> is an integrated social media and digital marketing
-            agency in Udaipur, Rajasthan. Offering creative and innovative solutions for
-            brands looking to grow their businesses online. If you are reading this,
-            then you're on the right site to onboard one of the best creative marketing agencies in India.
+        {/* BOTTOM ROW: Copyright & Legal Links */}
+        <div className="footer-bottom-bar">
+          <p className="footer-copy-text">
+            &copy; {new Date().getFullYear()} KLIQURA Digital Agency. All rights reserved.
           </p>
-
-          <button
-            className="footer-scroll-top-btn"
-            onClick={handleLinkClick}
-            aria-label="Scroll to top"
-            title="Scroll to top"
-          >
-            <FaArrowUp />
-          </button>
+          <div className="footer-legal-links">
+            <Link to="/contact-us" onClick={handleLinkClick}>Privacy Policy</Link>
+            <span className="legal-sep">&bull;</span>
+            <Link to="/contact-us" onClick={handleLinkClick}>Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>
